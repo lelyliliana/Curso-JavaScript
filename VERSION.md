@@ -1,6 +1,6 @@
 # Versión 1.0
 
-Estado: **completa y disponible**.
+Estado: **completa, autodidacta y disponible**.
 
 ## Alcance
 - 34 unidades en siete niveles;
@@ -22,3 +22,7 @@ Estado: **completa y disponible**.
 El curso cubre JavaScript sin framework desde fundamentos hasta una aplicación web modular y asíncrona.
 
 React permanece como curso independiente.
+
+## Experiencia de aprendizaje
+
+El curso puede recorrerse de forma autónoma desde tipos, funciones y colecciones hasta DOM, asincronía, consumo de APIs, módulos, pruebas, rendimiento y seguridad básica del frontend. Las unidades priorizan comprensión del modelo de ejecución, práctica, accesibilidad dinámica, diagnóstico con DevTools y decisiones justificadas.
