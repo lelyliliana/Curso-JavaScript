@@ -1,5 +1,7 @@
 # Curso de JavaScript desde cero
 
+**Versión 1.0**
+
 Curso abierto para aprender **JavaScript moderno** desde los fundamentos del lenguaje hasta programación en el navegador, asincronía, consumo de APIs, módulos, almacenamiento, manejo de errores y pruebas.
 
 ## Requisito recomendado
