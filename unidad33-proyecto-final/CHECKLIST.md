@@ -1,0 +1,13 @@
+# Checklist
+- [ ] Módulos ES.
+- [ ] Sin variables globales innecesarias.
+- [ ] DOM creado de forma segura.
+- [ ] Eventos accesibles.
+- [ ] Formularios validados.
+- [ ] response.ok comprobado.
+- [ ] loading/error/empty.
+- [ ] AbortController cuando aplica.
+- [ ] Sin secretos en frontend.
+- [ ] Tests.
+- [ ] npm reproducible.
+- [ ] README.
