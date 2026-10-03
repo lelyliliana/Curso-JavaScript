@@ -1,5 +1,7 @@
 # Unidad 09 — Destructuring, spread y rest
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Extraer datos, construir copias superficiales y diferenciar spread de rest según contexto.
 
@@ -142,3 +144,12 @@ Implementa actualización inmutable superficial de un estado anidado y demuestra
 - [ ] Comprendo copia superficial.
 
 Continúa con Map y Set.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 08 — Objetos, propiedades y referencias](../unidad08-objetos/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 10 — Map, Set y elección de estructuras](../unidad10-map-set/README.md)

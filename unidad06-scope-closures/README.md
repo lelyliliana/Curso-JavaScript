@@ -1,5 +1,7 @@
 # Unidad 06 — Scope, closures y modelo de ejecución
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Comprender alcance léxico, hoisting a nivel práctico, temporal dead zone, call stack y closures.
 
@@ -136,3 +138,12 @@ Fábrica de contadores independientes con incremento, lectura y reset sin expone
 - [ ] Diseño closures.
 
 Continúa con arrays.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 05 — Funciones como valores](../unidad05-funciones/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 07 — Arrays y transformaciones](../unidad07-arrays/README.md)

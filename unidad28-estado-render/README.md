@@ -1,5 +1,7 @@
 # Unidad 28 — Estado y renderizado determinista
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Usar estado JavaScript como fuente de verdad y derivar la interfaz de manera predecible.
 
@@ -108,3 +110,12 @@ Lista cuyo DOM pueda reconstruirse completamente desde state.
 - [ ] IDs estables.
 
 Continúa con arquitectura.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 27 — Depuración con DevTools](../unidad27-debug/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 29 — Arquitectura de una aplicación JavaScript](../unidad29-arquitectura/README.md)

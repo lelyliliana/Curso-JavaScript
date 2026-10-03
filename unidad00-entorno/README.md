@@ -1,5 +1,7 @@
 # Unidad 00 — Entorno, consola y primer JavaScript
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Ejecutar JavaScript en el navegador, conectar un módulo a HTML y diagnosticar errores con Console y Network.
 
@@ -100,3 +102,11 @@ Página mínima con módulo y bitácora de tres fallos distintos diagnosticados 
 - [ ] Trabajo con módulo.
 
 Continúa con tipos.
+
+
+---
+
+## Continuar el curso
+
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 01 — Valores, tipos y variables](../unidad01-tipos/README.md)

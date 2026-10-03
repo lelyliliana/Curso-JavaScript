@@ -1,5 +1,7 @@
 # Unidad 26 — Pruebas de JavaScript
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Probar lógica, errores, DOM y asincronía observando comportamiento en lugar de implementación interna.
 
@@ -106,3 +108,12 @@ Suite de lista remota cubriendo lógica, DOM, error y empty.
 - [ ] DOM desde perspectiva de uso.
 
 Continúa con depuración.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 25 — Linting, formato y calidad automatizada](../unidad25-calidad/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 27 — Depuración con DevTools](../unidad27-debug/README.md)

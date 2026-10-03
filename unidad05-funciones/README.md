@@ -1,5 +1,7 @@
 # Unidad 05 — Funciones como valores
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Diseñar funciones, distinguir declaraciones/expresiones/arrows y pasar comportamiento como argumento.
 
@@ -140,3 +142,12 @@ Pipeline de transformación compuesto por funciones pequeñas, con al menos una 
 - [ ] Separo cálculos/efectos.
 
 Continúa con scope y closures.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 04 — Ciclos e iteración](../unidad04-ciclos/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 06 — Scope, closures y modelo de ejecución](../unidad06-scope-closures/README.md)

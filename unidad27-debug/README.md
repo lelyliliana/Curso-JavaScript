@@ -1,5 +1,7 @@
 # Unidad 27 — Depuración con DevTools
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Investigar fallos síncronos y asíncronos mediante breakpoints, call stack, Network y evidencia.
 
@@ -107,3 +109,12 @@ Bitácora de fallo async con evidencia temporal y prueba de regresión.
 - [ ] Verifico/regresión.
 
 Continúa con estado.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 26 — Pruebas de JavaScript](../unidad26-pruebas/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 28 — Estado y renderizado determinista](../unidad28-estado-render/README.md)

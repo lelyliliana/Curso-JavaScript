@@ -1,5 +1,7 @@
 # Unidad 10 — Map, Set y elección de estructuras
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Usar Set para unicidad y Map para asociaciones, comparándolos con Array/Object según operaciones.
 
@@ -117,3 +119,12 @@ Procesa registros: ids únicos con Set y totales por categoría con Map.
 - [ ] No reemplazo estructuras por moda.
 
 Continúa con prototipos.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 09 — Destructuring, spread y rest](../unidad09-destructuring/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 11 — Prototipos, clases y this](../unidad11-clases-prototipos/README.md)

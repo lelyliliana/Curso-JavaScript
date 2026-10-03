@@ -1,5 +1,7 @@
 # Unidad 14 — Formularios y validación
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Trabajar con submit, FormData y Constraint Validation sin sustituir semántica HTML ni validación de servidor.
 
@@ -123,3 +125,12 @@ Formulario accesible que distinga vacío, 0 válido y número inválido.
 - [ ] Comunico errores accesiblemente.
 
 Continúa con accesibilidad dinámica.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 13 — Eventos y delegación](../unidad13-eventos/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 15 — Interfaces dinámicas accesibles](../unidad15-accesibilidad-dinamica/README.md)

@@ -1,5 +1,7 @@
 # Unidad 01 — Valores, tipos y variables
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Distinguir primitivos y referencias, const y let, null y undefined, mutación y reasignación.
 
@@ -134,3 +136,12 @@ Tabla de valores con typeof, comprobación adecuada y explicación.
 - [ ] Detecto arrays/NaN.
 
 Continúa con operadores.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 00 — Entorno, consola y primer JavaScript](../unidad00-entorno/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 02 — Operadores, coerción y comparación](../unidad02-operadores/README.md)

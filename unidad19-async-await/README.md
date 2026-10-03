@@ -1,5 +1,7 @@
 # Unidad 19 — async/await y concurrencia
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Escribir flujos asíncronos legibles y distinguir espera secuencial de concurrencia.
 
@@ -144,3 +146,12 @@ Flujo con dependencias y concurrencia justificadas, acompañado de diagrama temp
 - [ ] Considero límites.
 
 Continúa con fetch.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 18 — Promises y composición asíncrona](../unidad18-promises/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 20 — Fetch y consumo de APIs](../unidad20-fetch/README.md)

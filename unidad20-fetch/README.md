@@ -1,5 +1,7 @@
 # Unidad 20 — Fetch y consumo de APIs
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Realizar peticiones HTTP, comprobar status, interpretar cuerpos y separar cliente de red de la interfaz.
 
@@ -154,3 +156,12 @@ Cliente API que devuelva datos válidos o errores tipificados sin conocer la int
 - [ ] Construyo URLs correctamente.
 
 Continúa con errores de red.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 19 — async/await y concurrencia](../unidad19-async-await/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 21 — Errores de red, cancelación y timeouts](../unidad21-errores-red/README.md)

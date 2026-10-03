@@ -1,5 +1,7 @@
 # Unidad 11 — Prototipos, clases y this
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Comprender el modelo prototípico, la sintaxis class, campos privados y cómo se determina this.
 
@@ -133,3 +135,12 @@ Modela una entidad con invariantes usando class o factory y justifica la elecci�
 - [ ] Elijo class/factory con criterio.
 
 Continúa con DOM.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 10 — Map, Set y elección de estructuras](../unidad10-map-set/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 12 — DOM y renderizado seguro](../unidad12-dom/README.md)

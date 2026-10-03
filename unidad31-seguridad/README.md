@@ -1,5 +1,7 @@
 # Unidad 31 — Seguridad web básica para frontend
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Reconocer límites de confianza del navegador, prevenir inyección de HTML y evitar secretos/decisiones de autorización en el cliente.
 
@@ -149,3 +151,12 @@ Auditoría conceptual de una app identificando límites de confianza y puntos de
 - [ ] Dependencias con criterio.
 
 Continúa con taller.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 30 — Rendimiento en el navegador](../unidad30-rendimiento/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 32 — Taller integrador de aplicaciones](../unidad32-taller/README.md)

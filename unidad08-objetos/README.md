@@ -1,5 +1,7 @@
 # Unidad 08 — Objetos, propiedades y referencias
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Modelar datos, acceder dinámicamente, enumerar propiedades y comprender identidad y copia superficial.
 
@@ -130,3 +132,12 @@ Transforma colección de usuarios a nuevos objetos con campo derivado sin modifi
 - [ ] Copio conscientemente.
 
 Continúa con destructuring.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 07 — Arrays y transformaciones](../unidad07-arrays/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 09 — Destructuring, spread y rest](../unidad09-destructuring/README.md)

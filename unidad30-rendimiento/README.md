@@ -1,5 +1,7 @@
 # Unidad 30 — Rendimiento en el navegador
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Medir antes de optimizar, reducir trabajo innecesario y distinguir problemas de DOM, CPU, red y memoria.
 
@@ -120,3 +122,12 @@ Perfil antes/después de un cuello real con conclusión limitada a evidencia.
 - [ ] Repito escenario.
 
 Continúa con seguridad.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 29 — Arquitectura de una aplicación JavaScript](../unidad29-arquitectura/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 31 — Seguridad web básica para frontend](../unidad31-seguridad/README.md)

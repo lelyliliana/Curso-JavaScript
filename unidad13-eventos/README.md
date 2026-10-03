@@ -1,5 +1,7 @@
 # Unidad 13 — Eventos y delegación
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Escuchar eventos, distinguir target/currentTarget, comprender propagación y delegar sin llenar cada elemento de listeners.
 
@@ -118,3 +120,12 @@ Lista con delegación que soporte elementos añadidos después y botones semánt
 - [ ] Mantengo HTML interactivo nativo.
 
 Continúa con formularios.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 12 — DOM y renderizado seguro](../unidad12-dom/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 14 — Formularios y validación](../unidad14-formularios/README.md)

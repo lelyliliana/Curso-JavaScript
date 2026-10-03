@@ -1,5 +1,7 @@
 # Unidad 07 — Arrays y transformaciones
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Elegir operaciones mutantes/no mutantes y usar map, filter, find, some, every y reduce con intención.
 
@@ -152,3 +154,12 @@ Genera reporte de ventas sin modificar el array original y justifica cada métod
 - [ ] Mantengo transformaciones claras.
 
 Continúa con objetos.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 06 — Scope, closures y modelo de ejecución](../unidad06-scope-closures/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 08 — Objetos, propiedades y referencias](../unidad08-objetos/README.md)

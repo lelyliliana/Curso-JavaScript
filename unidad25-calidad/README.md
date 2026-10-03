@@ -1,5 +1,7 @@
 # Unidad 25 — Linting, formato y calidad automatizada
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Distinguir formatter, linter y tests, automatizarlos y tratar reglas como decisiones del proyecto.
 
@@ -101,3 +103,12 @@ Pipeline local format/lint/test y documento de qué garantiza y qué no cada eta
 - [ ] Automatización sostenible.
 
 Continúa con pruebas.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 24 — npm, package.json y dependencias](../unidad24-npm/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 26 — Pruebas de JavaScript](../unidad26-pruebas/README.md)

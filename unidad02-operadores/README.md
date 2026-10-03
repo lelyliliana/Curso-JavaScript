@@ -1,5 +1,7 @@
 # Unidad 02 — Operadores, coerción y comparación
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Comprender coerción, igualdad estricta, truthiness, nullish coalescing y operadores lógicos que retornan valores.
 
@@ -149,3 +151,12 @@ Normaliza entradas de un formulario distinguiendo vacío, cero, null y valor inv
 - [ ] Convierto explícitamente.
 
 Continúa con decisiones.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 01 — Valores, tipos y variables](../unidad01-tipos/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 03 — Decisiones y truthiness](../unidad03-decisiones/README.md)

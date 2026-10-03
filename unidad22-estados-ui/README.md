@@ -1,5 +1,7 @@
 # Unidad 22 — Estados de interfaz para datos asíncronos
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Modelar idle, loading, success, empty y error para que la UI siempre explique qué está ocurriendo.
 
@@ -151,3 +153,12 @@ Interfaz remota completa que nunca quede sin explicar su estado.
 - [ ] Accesibilidad.
 
 Continúa con módulos.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 21 — Errores de red, cancelación y timeouts](../unidad21-errores-red/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 23 — Módulos ES](../unidad23-modulos/README.md)

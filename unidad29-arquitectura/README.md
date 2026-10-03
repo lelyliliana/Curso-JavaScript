@@ -1,5 +1,7 @@
 # Unidad 29 — Arquitectura de una aplicación JavaScript
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Separar acceso a datos, estado, lógica, render y eventos sin crear capas por moda.
 
@@ -111,3 +113,12 @@ Arquitectura de app remota con diagrama de dependencias y cero ciclos.
 - [ ] Sin ciclos.
 
 Continúa con rendimiento.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 28 — Estado y renderizado determinista](../unidad28-estado-render/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 30 — Rendimiento en el navegador](../unidad30-rendimiento/README.md)

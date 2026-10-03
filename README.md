@@ -1,5 +1,11 @@
 # Curso de JavaScript desde cero
 
+**[Comenzar el curso: Unidad 00 — Entorno, consola y primer JavaScript](unidad00-entorno/README.md)**
+
+Puedes leer las lecciones aquí sin conocer GitHub. Al terminar cada unidad, usa **Siguiente unidad** para avanzar; **Unidad anterior** y **Volver al índice** te permiten regresar.
+
+[Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 **Versión 1.0**
 
 Curso abierto para aprender **JavaScript moderno** desde los fundamentos del lenguaje hasta programación en el navegador, asincronía, consumo de APIs, módulos, almacenamiento, manejo de errores y pruebas.

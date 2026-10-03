@@ -1,5 +1,7 @@
 # Unidad 18 — Promises y composición asíncrona
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Comprender estados de una Promise, encadenar resultados, propagar errores y coordinar operaciones.
 
@@ -152,3 +154,12 @@ Cadena con dos operaciones dependientes y dos independientes, incluyendo propaga
 - [ ] Coordino según dependencia.
 
 Continúa con async/await.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 17 — Event loop, tareas y microtareas](../unidad17-event-loop/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 19 — async/await y concurrencia](../unidad19-async-await/README.md)

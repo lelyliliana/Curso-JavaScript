@@ -1,5 +1,7 @@
 # Unidad 12 — DOM y renderizado seguro
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Consultar, crear y actualizar nodos sin confundir HTML fuente, DOM y estado de la aplicación.
 
@@ -125,3 +127,12 @@ Renderiza una lista con datos que contengan caracteres HTML y demuestra que se m
 - [ ] Separo estado/DOM.
 
 Continúa con eventos.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 11 — Prototipos, clases y this](../unidad11-clases-prototipos/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 13 — Eventos y delegación](../unidad13-eventos/README.md)

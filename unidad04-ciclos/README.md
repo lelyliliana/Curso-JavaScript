@@ -1,5 +1,7 @@
 # Unidad 04 — Ciclos e iteración
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Elegir for, while y for...of y distinguir iteración de valores, índices y propiedades.
 
@@ -110,3 +112,12 @@ Analiza temperaturas con índice, máximos y nueva colección, manejando array v
 - [ ] Manejo vacío.
 
 Continúa con funciones.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 03 — Decisiones y truthiness](../unidad03-decisiones/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 05 — Funciones como valores](../unidad05-funciones/README.md)

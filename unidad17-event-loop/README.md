@@ -1,5 +1,7 @@
 # Unidad 17 — Event loop, tareas y microtareas
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Explicar el orden de ejecución asíncrona sin imaginar que JavaScript crea un hilo por cada callback.
 
@@ -141,3 +143,12 @@ Crea cinco experimentos de orden y dibuja stack, microtareas y tareas.
 - [ ] No confundo asincronía/paralelismo.
 
 Continúa con Promises.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 16 — Web Storage y persistencia en el navegador](../unidad16-storage/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 18 — Promises y composición asíncrona](../unidad18-promises/README.md)

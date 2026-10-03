@@ -1,5 +1,7 @@
 # Unidad 21 — Errores de red, cancelación y timeouts
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Distinguir fallos de red, HTTP, parseo, cancelación y timeout, y evitar respuestas obsoletas.
 
@@ -126,3 +128,12 @@ Buscador con cancelación de consulta anterior y clasificación de fallos.
 - [ ] Reintento con criterio.
 
 Continúa con estados de UI.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 20 — Fetch y consumo de APIs](../unidad20-fetch/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 22 — Estados de interfaz para datos asíncronos](../unidad22-estados-ui/README.md)

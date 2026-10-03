@@ -1,5 +1,7 @@
 # Unidad 03 — Decisiones y truthiness
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Construir condiciones sin confundir ausencia, falsedad y valores válidos.
 
@@ -119,3 +121,12 @@ Validador de cantidad donde 0 es permitido, ausencia no, y negativos son inváli
 - [ ] Mantengo condiciones legibles.
 
 Continúa con ciclos.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 02 — Operadores, coerción y comparación](../unidad02-operadores/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 04 — Ciclos e iteración](../unidad04-ciclos/README.md)

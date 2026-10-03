@@ -1,5 +1,7 @@
 # Unidad 23 — Módulos ES
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Dividir una aplicación por responsabilidades, importar/exportar explícitamente y evitar dependencias circulares.
 
@@ -125,3 +127,12 @@ App en cuatro módulos con grafo de dependencias explicado.
 - [ ] Grafo comprensible.
 
 Continúa con npm.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 22 — Estados de interfaz para datos asíncronos](../unidad22-estados-ui/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 24 — npm, package.json y dependencias](../unidad24-npm/README.md)

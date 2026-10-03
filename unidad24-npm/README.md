@@ -1,5 +1,7 @@
 # Unidad 24 — npm, package.json y dependencias
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Gestionar scripts/dependencias de desarrollo y reproducir el entorno sin versionar node_modules.
 
@@ -124,3 +126,12 @@ Proyecto clonable que se prepara con un comando documentado y ejecuta tests medi
 - [ ] Dependencias justificadas.
 
 Continúa con calidad.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 23 — Módulos ES](../unidad23-modulos/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 25 — Linting, formato y calidad automatizada](../unidad25-calidad/README.md)

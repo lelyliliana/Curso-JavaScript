@@ -1,5 +1,7 @@
 # Unidad 32 — Taller integrador de aplicaciones
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Propósito
 
 Resolver problemas sin que el enunciado indique “usa map”, “usa localStorage” o “usa Promise.all”.
@@ -138,3 +140,12 @@ Para cada reto documenta:
 - [ ] Diagnóstico.
 
 Continúa con proyecto final.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 31 — Seguridad web básica para frontend](../unidad31-seguridad/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 33 — Proyecto final](../unidad33-proyecto-final/README.md)

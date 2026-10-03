@@ -1,5 +1,7 @@
 # Unidad 16 — Web Storage y persistencia en el navegador
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Persistir preferencias/datos pequeños con localStorage/sessionStorage y comprender sus límites de seguridad, tamaño y sincronía.
 
@@ -126,3 +128,12 @@ Preferencias versionadas que sobrevivan recarga y se recuperen de datos corrupto
 - [ ] Mantengo datos pequeños.
 
 Continúa con event loop.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 15 — Interfaces dinámicas accesibles](../unidad15-accesibilidad-dinamica/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 17 — Event loop, tareas y microtareas](../unidad17-event-loop/README.md)

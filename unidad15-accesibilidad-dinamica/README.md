@@ -1,5 +1,7 @@
 # Unidad 15 — Interfaces dinámicas accesibles
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Qué aprenderás
 Gestionar foco, nombres, estados y anuncios cuando JavaScript cambia la interfaz.
 
@@ -122,3 +124,12 @@ Diálogo conceptual/implementación pequeña con apertura, cierre por Escape y r
 - [ ] Anuncios moderados.
 
 Continúa con almacenamiento.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 14 — Formularios y validación](../unidad14-formularios/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+- **Siguiente unidad:** [Unidad 16 — Web Storage y persistencia en el navegador](../unidad16-storage/README.md)

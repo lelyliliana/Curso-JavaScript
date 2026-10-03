@@ -1,5 +1,7 @@
 # Unidad 33 — Proyecto final
 
+[Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
+
 ## Propósito
 
 Construir una aplicación web JavaScript modular, accesible, comprobable y segura sobre una interfaz HTML/CSS.
@@ -219,3 +221,13 @@ Pregunta:
 # Cierre
 
 > Saber JavaScript no consiste en memorizar métodos: consiste en comprender el modelo de ejecución, controlar el estado, diseñar efectos y construir interfaces que sigan siendo correctas cuando la red, los datos y las personas no se comportan como el caso ideal.
+
+
+---
+
+## Continuar el curso
+
+- **Unidad anterior:** [Unidad 32 — Taller integrador de aplicaciones](../unidad32-taller/README.md)
+- **Volver al índice:** [Todas las unidades](../README.md)
+
+Llegaste a la última unidad. Revisa tu proyecto y la lista de comprobación antes de dar por terminado el curso.
