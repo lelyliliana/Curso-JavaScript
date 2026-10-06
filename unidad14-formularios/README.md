@@ -1,4 +1,4 @@
-# Unidad 14 — Formularios y validación
+# Unidad 14: Formularios y validación
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
 
@@ -40,6 +40,7 @@ Después valida el resultado. Number("") puede ser 0.
 # 4. Constraint Validation API
 
 HTML puede declarar:
+
 - required;
 - min/max;
 - pattern;
@@ -77,6 +78,7 @@ No intentes convertir toda regla de negocio en JavaScript del navegador.
 # 8. Errores accesibles
 
 Un error debería:
+
 - identificar el campo;
 - explicar corrección;
 - asociarse al control;
@@ -93,6 +95,7 @@ Tu estado JS/errores personalizados también pueden necesitar limpiarse; reset n
 # 10. Práctica guiada
 
 Formulario:
+
 - nombre;
 - email;
 - cantidad donde 0 sea válido.
@@ -100,6 +103,7 @@ Formulario:
 Usa FormData, conversión explícita y mensajes asociados.
 
 # 11. Errores frecuentes
+
 - escuchar solo click;
 - campo sin name;
 - Number("") aceptado accidentalmente;
@@ -111,6 +115,7 @@ Usa FormData, conversión explícita y mensajes asociados.
 Formulario accesible que distinga vacío, 0 válido y número inválido.
 
 # 13. Autoevaluación
+
 1. ¿Por qué submit?
 2. ¿FormData usa id o name?
 3. ¿Number("")?
@@ -119,6 +124,7 @@ Formulario accesible que distinga vacío, 0 válido y número inválido.
 6. ¿Cliente sustituye servidor?
 
 # 14. Checklist
+
 - [ ] Manejo submit.
 - [ ] Leo FormData.
 - [ ] Convierto/valido.
@@ -127,10 +133,57 @@ Formulario accesible que distinga vacío, 0 válido y número inválido.
 Continúa con accesibilidad dinámica.
 
 
+
+## Laboratorio completo: Validar un formulario
+
+### Modelo y contrato
+
+submit permite procesar el envío tanto desde botón como desde Enter. La validación nativa ocurre antes de un submit válido; dentro del handler se aplican reglas adicionales como trim. preventDefault conserva esta demostración en la página. No implica que se haya enviado nada.
+
+La etiqueta visible se asocia mediante for/id. El error permanece junto al campo, se vincula con aria-describedby y se anuncia mediante una región apropiada. Al fallar, aria-invalid comunica el estado; al corregirse debe retirarse. No marques inválidos todos los controles desde el primer render. Una regla de cliente mejora experiencia, pero un servidor real tendría que validar de nuevo su contrato. El ejemplo informa su alcance en la salida y utiliza datos ficticios.
+
+### Abrir y observar
+
+Inicia el servidor del curso como se explica en [ENTORNO.md](../docs/ENTORNO.md) y abre [ejemplo/index.html](ejemplo/index.html) mediante HTTP. GitHub muestra el código fuente; no ejecuta la página. El HTML y CSS están completos y app.js es el módulo de entrada. Usa una copia local para practicar.
+
+**Resultado esperado:** Espacios no cuentan como nombre válido. Ana produce nombre Ana y guardadoEnServidor false. No hay envío ni almacenamiento.
+
+### Código explicado por su comportamiento
+
+El código principal de [app.js](ejemplo/app.js) es:
+
+```js
+const formulario = document.querySelector('#formulario');
+const nombre = document.querySelector('#nombre');
+const error = document.querySelector('#error');
+formulario.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const texto = nombre.value.trim();
+  if (texto.length < 2) {
+    error.textContent = 'Escribe al menos dos caracteres, sin contar espacios exteriores.';
+    nombre.setAttribute('aria-invalid', 'true'); nombre.focus(); return;
+  }
+  error.textContent = ''; nombre.removeAttribute('aria-invalid');
+  mostrar({ nombre: texto, guardadoEnServidor: false });
+});
+```
+
+La función mostrar del archivo completo escribe JSON en la región de salida usando textContent. Es una ayuda de presentación, no parte del algoritmo. En los laboratorios interactivos, el HTML proporciona controles con los id que consulta el módulo. Identifica primero esas dependencias antes de copiar el código a otra página.
+
+### Experimento
+
+Prueba vacío, un carácter, espacios y Ana. Añade un máximo de 40 caracteres al HTML y a la regla JavaScript; compara datos introducidos y límites.
+
+Escribe la predicción antes de ejecutar. Cambia una condición por vez, guarda y recarga. Si el resultado difiere, identifica la entrada y la primera operación que rompe el contrato. No consideres correcto un ejemplo únicamente porque no lanzó excepción.
+
+### Práctica y contraste
+
+Completa [PRACTICA.md](PRACTICA.md) y consulta después [SOLUCIONES.md](SOLUCIONES.md). Ambas páginas permiten volver a esta lección y continuar. Conserva la evidencia de los casos normales, límites y fallos que aplican al tema.
+
 ---
 
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 13 — Eventos y delegación](../unidad13-eventos/README.md)
+- **Unidad anterior:** [Unidad 13: Eventos y delegación](../unidad13-eventos/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 15 — Interfaces dinámicas accesibles](../unidad15-accesibilidad-dinamica/README.md)
+- **Siguiente unidad:** [Unidad 15: Interfaces dinámicas accesibles](../unidad15-accesibilidad-dinamica/README.md)

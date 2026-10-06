@@ -1,4 +1,4 @@
-# Unidad 33 — Proyecto final
+# Unidad 33: Proyecto final
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
 
@@ -6,9 +6,10 @@
 
 Construir una aplicación web JavaScript modular, accesible, comprobable y segura sobre una interfaz HTML/CSS.
 
-# Etapa 1 — Problema
+# Etapa 1: Problema
 
 Elige un dominio no sensible:
+
 - tareas;
 - catálogo;
 - biblioteca;
@@ -19,18 +20,19 @@ Elige un dominio no sensible:
 
 Define usuario, necesidad, alcance y exclusiones.
 
-# Etapa 2 — HTML/CSS base
+# Etapa 2: HTML/CSS base
 
 La interfaz debe funcionar semánticamente antes de añadir comportamiento complejo.
 
 Define:
+
 - headings;
 - controles nativos;
 - formularios;
 - regiones;
 - responsive.
 
-# Etapa 3 — Estado
+# Etapa 3: Estado
 
 Diseña:
 
@@ -47,9 +49,10 @@ Adáptalo al dominio.
 
 Identifica qué información es derivada y no debe duplicarse.
 
-# Etapa 4 — Lógica pura
+# Etapa 4: Lógica pura
 
 Separa:
+
 - filtros;
 - cálculos;
 - validaciones;
@@ -57,25 +60,25 @@ Separa:
 
 Prueba estas funciones primero.
 
-# Etapa 5 — Render
+# Etapa 5: Render
 
 La UI se deriva del estado.
 
 Renderiza datos externos como texto salvo que exista una necesidad explícita de HTML sanitizado.
 
-# Etapa 6 — Eventos
+# Etapa 6: Eventos
 
 Usa controles semánticos y delegación cuando reduzca listeners/acoplamiento.
 
 No recrees botones con div.
 
-# Etapa 7 — Formularios
+# Etapa 7: Formularios
 
 Maneja submit, FormData, conversión y validación.
 
 Distingue validación del navegador, lógica cliente y reglas que necesitarían backend.
 
-# Etapa 8 — Persistencia local
+# Etapa 8: Persistencia local
 
 Solo si aporta.
 
@@ -83,9 +86,10 @@ Versiona el formato y recupera ante datos corruptos.
 
 No almacenes secretos.
 
-# Etapa 9 — API externa
+# Etapa 9: API externa
 
 Si el proyecto la necesita:
+
 - cliente separado;
 - response.ok;
 - parseo;
@@ -93,9 +97,10 @@ Si el proyecto la necesita:
 - timeout/cancelación;
 - datos no confiables.
 
-# Etapa 10 — Estados remotos
+# Etapa 10: Estados remotos
 
 Implementa:
+
 - idle;
 - loading;
 - success;
@@ -105,9 +110,10 @@ Implementa:
 
 Evita respuestas obsoletas.
 
-# Etapa 11 — Accesibilidad dinámica
+# Etapa 11: Accesibilidad dinámica
 
 Prueba:
+
 - teclado;
 - foco;
 - nombres;
@@ -115,7 +121,7 @@ Prueba:
 - anuncios necesarios;
 - zoom/reflow heredados del HTML/CSS.
 
-# Etapa 12 — Módulos
+# Etapa 12: Módulos
 
 Organiza responsabilidades sin ciclos.
 
@@ -131,27 +137,30 @@ app
 
 No es obligatorio usar esos nombres.
 
-# Etapa 13 — npm y calidad
+# Etapa 13: npm y calidad
 
 Incluye scripts para:
+
 - test;
 - lint;
 - format cuando uses herramientas correspondientes.
 
 Versiona lockfile y excluye node_modules.
 
-# Etapa 14 — Pruebas
+# Etapa 14: Pruebas
 
 Incluye:
+
 - funciones puras;
 - al menos un comportamiento DOM;
 - un escenario async/error.
 
 No uses Internet real en la suite.
 
-# Etapa 15 — Seguridad
+# Etapa 15: Seguridad
 
 Audita:
+
 - innerHTML;
 - URLs;
 - storage;
@@ -159,9 +168,10 @@ Audita:
 - dependencias;
 - decisiones de autorización que deben pertenecer al servidor.
 
-# Etapa 16 — Rendimiento
+# Etapa 16: Rendimiento
 
 Elige un flujo:
+
 1. baseline;
 2. profile;
 3. hipótesis;
@@ -170,16 +180,17 @@ Elige un flujo:
 
 No se exige “mejora” si la evidencia muestra que el supuesto cuello no era real.
 
-# Etapa 17 — Depuración
+# Etapa 17: Depuración
 
 Incluye una bitácora de al menos un fallo real:
 ```text
 síntoma → hipótesis → evidencia → corrección → regresión
 ```
 
-# Etapa 18 — README
+# Etapa 18: README
 
 Otra persona debe poder:
+
 1. instalar;
 2. ejecutar;
 3. probar;
@@ -187,17 +198,18 @@ Otra persona debe poder:
 5. conocer fuente de datos;
 6. comprender limitaciones.
 
-# Etapa 19 — Publicación
+# Etapa 19: Publicación
 
 Si es una app puramente frontend, publícala en hosting estático compatible.
 
 Si depende de una API, documenta CORS/configuración y no incluyas secretos.
 
-# Etapa 20 — Revisión final
+# Etapa 20: Revisión final
 
 Usa `PLANTILLA_PROYECTO.md`, `RUBRICA.md` y `CHECKLIST.md`.
 
 Pregunta:
+
 - ¿el estado es explícito?
 - ¿DOM y datos están separados?
 - ¿hay loading/empty/error?
@@ -223,11 +235,18 @@ Pregunta:
 > Saber JavaScript no consiste en memorizar métodos: consiste en comprender el modelo de ejecución, controlar el estado, diseñar efectos y construir interfaces que sigan siendo correctas cuando la red, los datos y las personas no se comportan como el caso ideal.
 
 
+
+## Proyecto completo y referencia
+
+Sigue el [enunciado desarrollado](PRACTICA.md) para concretar funcionalidades, límites y etapas. Usa la plantilla y rúbrica para documentar decisiones y evidencia. Consulta la [solución razonada](SOLUCIONES.md) y el [gestor de tareas ejecutable](../ejemplos/gestor-tareas/README.md).
+
+El resultado es una app estática sin framework. No requiere base de datos, cuenta de hosting ni un servicio externo para sus operaciones locales. El guardado usa solo este navegador/origen y no se presenta como una sincronización remota.
+
 ---
 
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 32 — Taller integrador de aplicaciones](../unidad32-taller/README.md)
+- **Unidad anterior:** [Unidad 32: Taller integrador de aplicaciones](../unidad32-taller/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
 
 Llegaste a la última unidad. Revisa tu proyecto y la lista de comprobación antes de dar por terminado el curso.

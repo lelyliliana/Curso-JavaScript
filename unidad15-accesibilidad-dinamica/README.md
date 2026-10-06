@@ -1,4 +1,4 @@
-# Unidad 15 — Interfaces dinámicas accesibles
+# Unidad 15: Interfaces dinámicas accesibles
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
 
@@ -42,6 +42,7 @@ No “persigas” cada cambio con focus.
 # 4. Eliminar elemento enfocado
 
 Si borras el elemento que tiene foco, decide dónde debe continuar:
+
 - siguiente elemento;
 - anterior;
 - encabezado/acción relevante.
@@ -57,6 +58,7 @@ Evita que el usuario quede perdido.
 ```
 
 Ejemplos:
+
 - “3 resultados encontrados”;
 - “Guardado”.
 
@@ -65,6 +67,7 @@ No pongas regiones enormes/live para todo; produciría anuncios excesivos.
 # 6. Dialog
 
 Un diálogo accesible implica:
+
 - nombre;
 - foco inicial;
 - interacción modal cuando corresponde;
@@ -83,6 +86,7 @@ Decide si necesita anuncio, foco o simplemente estar disponible en navegación n
 # 8. Estados loading
 
 Un control puede usar:
+
 - disabled cuando realmente no debe activarse;
 - texto “Guardando…”;
 - `aria-busy` en una región cuando corresponde.
@@ -94,12 +98,14 @@ No deshabilites grandes zonas sin explicar el estado.
 Construye disclosure y notificación de guardado.
 
 Prueba solo teclado:
+
 - abrir;
 - cerrar;
 - foco;
 - estado anunciado.
 
 # 10. Errores frecuentes
+
 - div clickable;
 - aria-expanded desincronizado;
 - aria-live en toda la app;
@@ -110,6 +116,7 @@ Prueba solo teclado:
 Diálogo conceptual/implementación pequeña con apertura, cierre por Escape y retorno de foco, verificando semántica.
 
 # 12. Autoevaluación
+
 1. ¿ARIA reemplaza HTML nativo?
 2. ¿Cuándo mover foco?
 3. ¿Para qué aria-live?
@@ -118,6 +125,7 @@ Diálogo conceptual/implementación pequeña con apertura, cierre por Escape y r
 6. ¿ARIA debe reflejar estado real?
 
 # 13. Checklist
+
 - [ ] Nativos primero.
 - [ ] Estado sincronizado.
 - [ ] Foco intencional.
@@ -126,10 +134,53 @@ Diálogo conceptual/implementación pequeña con apertura, cierre por Escape y r
 Continúa con almacenamiento.
 
 
+
+## Laboratorio completo: Anunciar cambios
+
+### Modelo y contrato
+
+Una interfaz dinámica debe comunicar cambios importantes sin exigir mirar toda la pantalla. role=status anuncia información no urgente de forma cortés y suele ser preferible a alert para conteos normales. No vuelvas a anunciar todo el contenido de una lista extensa en cada cambio.
+
+El foco no se traslada por cualquier actualización. Aquí la persona puede seguir agregando recursos desde el mismo botón; moverla a cada li introduciría trabajo adicional. Cuando se elimina el control enfocado sí necesitas una política de recuperación (otra acción disponible o el control de entrada). Foco y anuncio son mecanismos distintos: anunciar no enfoca y enfocar no explica necesariamente el resultado. Utiliza controles nativos y nombres que describan la tarea. Prueba también con lector de pantalla cuando esté disponible.
+
+### Abrir y observar
+
+Inicia el servidor del curso como se explica en [ENTORNO.md](../docs/ENTORNO.md) y abre [ejemplo/index.html](ejemplo/index.html) mediante HTTP. GitHub muestra el código fuente; no ejecuta la página. El HTML y CSS están completos y app.js es el módulo de entrada. Usa una copia local para practicar.
+
+**Resultado esperado:** Cada activación añade un recurso y actualiza la región de estado sin desplazar el foco del botón.
+
+### Código explicado por su comportamiento
+
+El código principal de [app.js](ejemplo/app.js) es:
+
+```js
+const boton = document.querySelector('#agregar');
+const lista = document.querySelector('#lista');
+const estado = document.querySelector('#estado');
+let cantidad = 0;
+boton.addEventListener('click', () => {
+  cantidad += 1;
+  const item = document.createElement('li'); item.textContent = `Recurso ${cantidad}`;
+  lista.append(item); estado.textContent = `${cantidad} recursos disponibles.`;
+});
+```
+
+La función mostrar del archivo completo escribe JSON en la región de salida usando textContent. Es una ayuda de presentación, no parte del algoritmo. En los laboratorios interactivos, el HTML proporciona controles con los id que consulta el módulo. Identifica primero esas dependencias antes de copiar el código a otra página.
+
+### Experimento
+
+Agrega tres recursos usando solo teclado. Anota dónde permanece el foco. Implementa una acción para limpiar la lista con un anuncio del resultado, conservando un destino de foco válido.
+
+Escribe la predicción antes de ejecutar. Cambia una condición por vez, guarda y recarga. Si el resultado difiere, identifica la entrada y la primera operación que rompe el contrato. No consideres correcto un ejemplo únicamente porque no lanzó excepción.
+
+### Práctica y contraste
+
+Completa [PRACTICA.md](PRACTICA.md) y consulta después [SOLUCIONES.md](SOLUCIONES.md). Ambas páginas permiten volver a esta lección y continuar. Conserva la evidencia de los casos normales, límites y fallos que aplican al tema.
+
 ---
 
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 14 — Formularios y validación](../unidad14-formularios/README.md)
+- **Unidad anterior:** [Unidad 14: Formularios y validación](../unidad14-formularios/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 16 — Web Storage y persistencia en el navegador](../unidad16-storage/README.md)
+- **Siguiente unidad:** [Unidad 16: Web Storage y persistencia en el navegador](../unidad16-storage/README.md)

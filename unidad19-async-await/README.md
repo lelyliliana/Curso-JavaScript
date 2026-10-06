@@ -1,4 +1,4 @@
-# Unidad 19 — async/await y concurrencia
+# Unidad 19: async/await y concurrencia
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
 
@@ -35,7 +35,7 @@ Si la Promise rechaza, `await` lanza en ese punto:
 try {
   const dato = await obtener();
 } catch (error) {
-  ...
+  console.error(error.message);
 }
 ```
 
@@ -93,6 +93,7 @@ for (const id of ids) {
 ```
 
 es secuencial y puede ser exactamente lo correcto si:
+
 - hay dependencia;
 - límite de tasa;
 - orden;
@@ -115,12 +116,14 @@ Puede retrasar evaluación de módulos dependientes; no lo uses solo para evitar
 # 11. Práctica guiada
 
 Mide con `performance.now()` dos tareas simuladas:
+
 - secuencial;
 - concurrente.
 
 Después crea un caso donde el segundo necesita el primero y explica por qué Promise.all sería incorrecto.
 
 # 12. Errores frecuentes
+
 - async retorna valor no Promise;
 - await congela navegador;
 - await secuencial por costumbre;
@@ -132,6 +135,7 @@ Después crea un caso donde el segundo necesita el primero y explica por qué Pr
 Flujo con dependencias y concurrencia justificadas, acompañado de diagrama temporal.
 
 # 14. Autoevaluación
+
 1. ¿async devuelve qué?
 2. ¿await bloquea todo?
 3. ¿Cuándo secuencial?
@@ -140,6 +144,7 @@ Flujo con dependencias y concurrencia justificadas, acompañado de diagrama temp
 6. ¿Concurrencia = paralelismo CPU?
 
 # 15. Checklist
+
 - [ ] Comprendo async.
 - [ ] Uso await con intención.
 - [ ] Paralelizo solo independientes.
@@ -148,10 +153,50 @@ Flujo con dependencias y concurrencia justificadas, acompañado de diagrama temp
 Continúa con fetch.
 
 
+
+## Laboratorio completo: async y await
+
+### Modelo y contrato
+
+Una función async siempre devuelve una Promise. return entrega un valor que se convierte en su resultado eventual; throw produce rechazo. await permite escribir la continuación de forma secuencial dentro de esa función, pero no convierte operaciones independientes en dependientes.
+
+Aquí las dos Promises se crean antes de esperar el conjunto. Si una operación necesita el resultado de otra, debes esperar primero esa relación. Si son independientes, evaluar las dos llamadas antes de Promise.all las inicia sin encadenarlas artificialmente. Promise.all agrega sus resultados; no inicia por sí mismo operaciones pendientes. Con cientos de solicitudes, iniciar todo a la vez puede saturar recursos: hace falta limitar concurrencia según el contrato. No uses forEach(async...) esperando que el método espere todos los callbacks; forEach no agrega esas Promises por ti.
+
+### Abrir y observar
+
+Inicia el servidor del curso como se explica en [ENTORNO.md](../docs/ENTORNO.md) y abre [ejemplo/index.html](ejemplo/index.html) mediante HTTP. GitHub muestra el código fuente; no ejecuta la página. El HTML y CSS están completos y app.js es el módulo de entrada. Usa una copia local para practicar.
+
+**Resultado esperado:** a 2, b 5 y suma 7.
+
+### Código explicado por su comportamiento
+
+El código principal de [app.js](ejemplo/app.js) es:
+
+```js
+const esperar = (valor) => Promise.resolve(valor);
+async function resumen() {
+  const [a, b] = await Promise.all([esperar(2), esperar(5)]);
+  return { a, b, suma: a + b };
+}
+mostrar(await resumen());
+```
+
+La función mostrar del archivo completo escribe JSON en la región de salida usando textContent. Es una ayuda de presentación, no parte del algoritmo. En los laboratorios interactivos, el HTML proporciona controles con los id que consulta el módulo. Identifica primero esas dependencias antes de copiar el código a otra página.
+
+### Experimento
+
+Reescribe el ejemplo como dos await consecutivos y explica cuándo esa secuencia sería necesaria. Simula rechazo de una operación y maneja error sin devolver suma 0 como si fuera válida.
+
+Escribe la predicción antes de ejecutar. Cambia una condición por vez, guarda y recarga. Si el resultado difiere, identifica la entrada y la primera operación que rompe el contrato. No consideres correcto un ejemplo únicamente porque no lanzó excepción.
+
+### Práctica y contraste
+
+Completa [PRACTICA.md](PRACTICA.md) y consulta después [SOLUCIONES.md](SOLUCIONES.md). Ambas páginas permiten volver a esta lección y continuar. Conserva la evidencia de los casos normales, límites y fallos que aplican al tema.
+
 ---
 
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 18 — Promises y composición asíncrona](../unidad18-promises/README.md)
+- **Unidad anterior:** [Unidad 18: Promises y composición asíncrona](../unidad18-promises/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 20 — Fetch y consumo de APIs](../unidad20-fetch/README.md)
+- **Siguiente unidad:** [Unidad 20: Fetch y consumo de APIs](../unidad20-fetch/README.md)

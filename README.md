@@ -1,18 +1,36 @@
 # Curso de JavaScript desde cero
 
-**[Comenzar el curso: Unidad 00 — Entorno, consola y primer JavaScript](unidad00-entorno/README.md)**
+**[Comenzar el curso: Unidad 00: Entorno, consola y primer JavaScript](unidad00-entorno/README.md)**
 
 Puedes leer las lecciones aquí sin conocer GitHub. Al terminar cada unidad, usa **Siguiente unidad** para avanzar; **Unidad anterior** y **Volver al índice** te permiten regresar.
 
 [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
 
-**Versión 1.0**
+**Versión 1.1**
 
 Curso abierto para aprender **JavaScript moderno** desde los fundamentos del lenguaje hasta programación en el navegador, asincronía, consumo de APIs, módulos, almacenamiento, manejo de errores y pruebas.
 
 ## Requisito recomendado
 
 [Curso de HTML y CSS desde cero](https://github.com/lelyliliana/Curso-HTML-CSS)
+
+## Comenzar y practicar
+
+1. Sigue [ENTORNO.md](docs/ENTORNO.md) para Ubuntu, Windows o macOS.
+2. Inicia el servidor con `npm start` y abre la URL indicada.
+3. Las unidades 00 a 31 tienen laboratorios completos. Realiza PRACTICA.md y consulta después SOLUCIONES.md.
+4. Las unidades 20 a 22 y el catálogo de referencia utilizan una API local con respuestas controladas.
+5. Integra reglas, UI y persistencia en el [gestor de tareas](ejemplos/gestor-tareas/README.md), taller y proyecto final.
+
+No necesitas instalar dependencias de producción. Los módulos requieren HTTP local; GitHub muestra código fuente, no ejecuta la aplicación.
+
+## Consulta
+
+- [Referencias oficiales](docs/REFERENCIAS.md).
+- [Diagnóstico paso a paso](docs/DIAGNOSTICO_JAVASCRIPT.md).
+- [Glosario](docs/GLOSARIO.md).
+- [Verificación y límites de las pruebas](docs/VERIFICACION.md).
+- [Contrato de la API local](servidor/README.md).
 
 ## Objetivo
 
@@ -37,53 +55,60 @@ Al finalizar podrás:
 
 ## Ruta
 
-### Nivel 1 — Lenguaje
-- [Unidad 00 — Entorno y consola](unidad00-entorno/)
-- [Unidad 01 — Valores, tipos y variables](unidad01-tipos/)
-- [Unidad 02 — Operadores, coerción y comparación](unidad02-operadores/)
-- [Unidad 03 — Decisiones](unidad03-decisiones/)
-- [Unidad 04 — Ciclos](unidad04-ciclos/)
-- [Unidad 05 — Funciones](unidad05-funciones/)
-- [Unidad 06 — Scope, closures y ejecución](unidad06-scope-closures/)
+### Nivel 1: Lenguaje
 
-### Nivel 2 — Datos
-- [Unidad 07 — Arrays](unidad07-arrays/)
-- [Unidad 08 — Objetos](unidad08-objetos/)
-- [Unidad 09 — Destructuring, spread y rest](unidad09-destructuring/)
-- [Unidad 10 — Map, Set y estructuras](unidad10-map-set/)
-- [Unidad 11 — Clases y prototipos](unidad11-clases-prototipos/)
+- [Unidad 00: Entorno y consola](unidad00-entorno/)
+- [Unidad 01: Valores, tipos y variables](unidad01-tipos/)
+- [Unidad 02: Operadores, coerción y comparación](unidad02-operadores/)
+- [Unidad 03: Decisiones](unidad03-decisiones/)
+- [Unidad 04: Ciclos](unidad04-ciclos/)
+- [Unidad 05: Funciones](unidad05-funciones/)
+- [Unidad 06: Scope, closures y ejecución](unidad06-scope-closures/)
 
-### Nivel 3 — JavaScript en el navegador
-- [Unidad 12 — DOM](unidad12-dom/)
-- [Unidad 13 — Eventos](unidad13-eventos/)
-- [Unidad 14 — Formularios y validación](unidad14-formularios/)
-- [Unidad 15 — Interfaces dinámicas accesibles](unidad15-accesibilidad-dinamica/)
-- [Unidad 16 — Web Storage](unidad16-storage/)
+### Nivel 2: Datos
 
-### Nivel 4 — Asincronía y APIs
-- [Unidad 17 — Event loop y asincronía](unidad17-event-loop/)
-- [Unidad 18 — Promises](unidad18-promises/)
-- [Unidad 19 — async/await](unidad19-async-await/)
-- [Unidad 20 — Fetch y APIs REST](unidad20-fetch/)
-- [Unidad 21 — Errores, timeouts y AbortController](unidad21-errores-red/)
-- [Unidad 22 — Estados de interfaz: loading/error/empty](unidad22-estados-ui/)
+- [Unidad 07: Arrays](unidad07-arrays/)
+- [Unidad 08: Objetos](unidad08-objetos/)
+- [Unidad 09: Destructuring, spread y rest](unidad09-destructuring/)
+- [Unidad 10: Map, Set y estructuras](unidad10-map-set/)
+- [Unidad 11: Clases y prototipos](unidad11-clases-prototipos/)
 
-### Nivel 5 — Organización moderna
-- [Unidad 23 — Módulos ES](unidad23-modulos/)
-- [Unidad 24 — npm y package.json](unidad24-npm/)
-- [Unidad 25 — Calidad, linting y formato](unidad25-calidad/)
-- [Unidad 26 — Pruebas de JavaScript](unidad26-pruebas/)
-- [Unidad 27 — Depuración y DevTools](unidad27-debug/)
+### Nivel 3: JavaScript en el navegador
 
-### Nivel 6 — Patrones prácticos
-- [Unidad 28 — Estado y renderizado](unidad28-estado-render/)
-- [Unidad 29 — Separación de responsabilidades](unidad29-arquitectura/)
-- [Unidad 30 — Rendimiento básico en el navegador](unidad30-rendimiento/)
-- [Unidad 31 — Seguridad web básica para frontend](unidad31-seguridad/)
+- [Unidad 12: DOM](unidad12-dom/)
+- [Unidad 13: Eventos](unidad13-eventos/)
+- [Unidad 14: Formularios y validación](unidad14-formularios/)
+- [Unidad 15: Interfaces dinámicas accesibles](unidad15-accesibilidad-dinamica/)
+- [Unidad 16: Web Storage](unidad16-storage/)
 
-### Nivel 7 — Integración
-- [Unidad 32 — Taller de aplicaciones](unidad32-taller/)
-- [Unidad 33 — Proyecto final](unidad33-proyecto-final/)
+### Nivel 4: Asincronía y APIs
+
+- [Unidad 17: Event loop y asincronía](unidad17-event-loop/)
+- [Unidad 18: Promises](unidad18-promises/)
+- [Unidad 19: async/await](unidad19-async-await/)
+- [Unidad 20: Fetch y APIs REST](unidad20-fetch/)
+- [Unidad 21: Errores, timeouts y AbortController](unidad21-errores-red/)
+- [Unidad 22: Estados de interfaz: loading/error/empty](unidad22-estados-ui/)
+
+### Nivel 5: Organización moderna
+
+- [Unidad 23: Módulos ES](unidad23-modulos/)
+- [Unidad 24: npm y package.json](unidad24-npm/)
+- [Unidad 25: Calidad, linting y formato](unidad25-calidad/)
+- [Unidad 26: Pruebas de JavaScript](unidad26-pruebas/)
+- [Unidad 27: Depuración y DevTools](unidad27-debug/)
+
+### Nivel 6: Patrones prácticos
+
+- [Unidad 28: Estado y renderizado](unidad28-estado-render/)
+- [Unidad 29: Separación de responsabilidades](unidad29-arquitectura/)
+- [Unidad 30: Rendimiento básico en el navegador](unidad30-rendimiento/)
+- [Unidad 31: Seguridad web básica para frontend](unidad31-seguridad/)
+
+### Nivel 7: Integración
+
+- [Unidad 32: Taller de aplicaciones](unidad32-taller/)
+- [Unidad 33: Proyecto final](unidad33-proyecto-final/)
 
 ## Metodología
 

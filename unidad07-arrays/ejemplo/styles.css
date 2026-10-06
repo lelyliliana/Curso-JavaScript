@@ -1,0 +1,11 @@
+* { box-sizing: border-box; }
+body { margin: 1rem; font: 1rem/1.6 system-ui, sans-serif; color: #172554; overflow-wrap: anywhere; }
+main { max-width: 65rem; margin-inline: auto; }
+button, input, select { font: inherit; max-width: 100%; }
+button { padding: .5rem .75rem; cursor: pointer; }
+input, select { padding: .5rem; }
+:focus-visible { outline: 3px solid #9f1239; outline-offset: 3px; }
+pre { white-space: pre-wrap; background: #f0f9ff; padding: 1rem; }
+.barra { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; }
+li { margin-block: .5rem; }
+.error { color: #9f1239; }

@@ -1,4 +1,4 @@
-# Unidad 04 — Ciclos e iteración
+# Unidad 04: Ciclos e iteración
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
 
@@ -40,8 +40,9 @@ No necesitas volver al for clásico solo por índice.
 # 4. for...in
 
 ```js
+const objeto = { nombre: "Ana", activo: true };
 for (const clave in objeto) {
-  ...
+  if (Object.hasOwn(objeto, clave)) console.log(clave, objeto[clave]);
 }
 ```
 
@@ -52,8 +53,10 @@ No es la opción habitual para recorrer valores de arrays.
 # 5. while
 
 ```js
-while (condicion) {
-  ...
+let intentos = 0;
+while (intentos < 3) {
+  console.log(`Intento ${intentos + 1}`);
+  intentos += 1;
 }
 ```
 
@@ -82,6 +85,7 @@ Promedios/máximos requieren política explícita para vacío.
 # 9. Práctica guiada
 
 Sin usar map/filter/reduce todavía, calcula:
+
 - suma;
 - promedio;
 - mayor;
@@ -89,6 +93,7 @@ Sin usar map/filter/reduce todavía, calcula:
 - nueva lista de pares.
 
 # 10. Errores frecuentes
+
 - <= length;
 - for...in para valores de array;
 - ciclo infinito;
@@ -99,6 +104,7 @@ Sin usar map/filter/reduce todavía, calcula:
 Analiza temperaturas con índice, máximos y nueva colección, manejando array vacío.
 
 # 12. Autoevaluación
+
 1. ¿for...of recorre qué?
 2. ¿for...in?
 3. ¿Cómo obtener índice con for...of?
@@ -106,6 +112,7 @@ Analiza temperaturas con índice, máximos y nueva colección, manejando array v
 5. ¿Qué ocurre con array vacío?
 
 # 13. Checklist
+
 - [ ] Elijo iteración.
 - [ ] Manejo índices.
 - [ ] Evito off-by-one.
@@ -114,10 +121,52 @@ Analiza temperaturas con índice, máximos y nueva colección, manejando array v
 Continúa con funciones.
 
 
+
+## Laboratorio completo: Recorrer y acumular
+
+### Modelo y contrato
+
+El acumulador conserva un resultado parcial y el contador registra cuántos casos cumplen una condición. Sus valores iniciales deben representar el conjunto vacío: suma 0 y contador 0 son identidades apropiadas aquí. Para un máximo, 0 no siempre sirve porque todos los datos podrían ser negativos.
+
+for...of recorre valores de un iterable; for...in enumera nombres de propiedades y no es el recorrido recomendado para datos de un array. En un ciclo por índice, la condición i < length evita consultar una posición fuera del rango. break termina ese ciclo y continue pasa a la siguiente iteración; ninguno significa terminar toda la aplicación. Define qué ocurre con una lista vacía antes de dividir para obtener un promedio.
+
+### Abrir y observar
+
+Inicia el servidor del curso como se explica en [ENTORNO.md](../docs/ENTORNO.md) y abre [ejemplo/index.html](ejemplo/index.html) mediante HTTP. GitHub muestra el código fuente; no ejecuta la página. El HTML y CSS están completos y app.js es el módulo de entrada. Usa una copia local para practicar.
+
+**Resultado esperado:** suma 9, positivos 2 y cantidad 4.
+
+### Código explicado por su comportamiento
+
+El código principal de [app.js](ejemplo/app.js) es:
+
+```js
+const valores = [4, -2, 7, 0];
+let suma = 0;
+let positivos = 0;
+for (const valor of valores) {
+  suma += valor;
+  if (valor > 0) positivos += 1;
+}
+mostrar({ suma, positivos, cantidad: valores.length });
+```
+
+La función mostrar del archivo completo escribe JSON en la región de salida usando textContent. Es una ayuda de presentación, no parte del algoritmo. En los laboratorios interactivos, el HTML proporciona controles con los id que consulta el módulo. Identifica primero esas dependencias antes de copiar el código a otra página.
+
+### Experimento
+
+Prueba una lista vacía y una lista de números negativos. Añade promedio con un resultado explícito para ausencia de datos; no devuelvas un NaN accidental.
+
+Escribe la predicción antes de ejecutar. Cambia una condición por vez, guarda y recarga. Si el resultado difiere, identifica la entrada y la primera operación que rompe el contrato. No consideres correcto un ejemplo únicamente porque no lanzó excepción.
+
+### Práctica y contraste
+
+Completa [PRACTICA.md](PRACTICA.md) y consulta después [SOLUCIONES.md](SOLUCIONES.md). Ambas páginas permiten volver a esta lección y continuar. Conserva la evidencia de los casos normales, límites y fallos que aplican al tema.
+
 ---
 
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 03 — Decisiones y truthiness](../unidad03-decisiones/README.md)
+- **Unidad anterior:** [Unidad 03: Decisiones y truthiness](../unidad03-decisiones/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 05 — Funciones como valores](../unidad05-funciones/README.md)
+- **Siguiente unidad:** [Unidad 05: Funciones como valores](../unidad05-funciones/README.md)

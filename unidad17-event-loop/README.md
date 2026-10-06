@@ -1,4 +1,4 @@
-# Unidad 17 — Event loop, tareas y microtareas
+# Unidad 17: Event loop, tareas y microtareas
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
 
@@ -10,6 +10,7 @@ Explicar el orden de ejecución asíncrona sin imaginar que JavaScript crea un h
 El motor ejecuta código JavaScript en un call stack.
 
 El navegador aporta APIs como:
+
 - timers;
 - eventos;
 - red;
@@ -119,6 +120,7 @@ console.log(5);
 Después explica cada paso.
 
 # 10. Errores frecuentes
+
 - setTimeout(0) = inmediato;
 - Promise = hilo;
 - async = trabajo CPU paralelo;
@@ -129,6 +131,7 @@ Después explica cada paso.
 Crea cinco experimentos de orden y dibuja stack, microtareas y tareas.
 
 # 12. Autoevaluación
+
 1. ¿Qué es call stack?
 2. ¿Timer 0 ejecuta inmediatamente?
 3. ¿Promise crea hilo?
@@ -137,6 +140,7 @@ Crea cinco experimentos de orden y dibuja stack, microtareas y tareas.
 6. ¿Asincronía = paralelismo CPU?
 
 # 13. Checklist
+
 - [ ] Predigo orden.
 - [ ] Distingo tareas/microtareas.
 - [ ] Comprendo bloqueo.
@@ -145,10 +149,49 @@ Crea cinco experimentos de orden y dibuja stack, microtareas y tareas.
 Continúa con Promises.
 
 
+
+## Laboratorio completo: Orden del event loop
+
+### Modelo y contrato
+
+El código síncrono de esta tarea termina antes de que se procese la reacción de la Promise. Esa reacción se encola como microtarea. El callback del timer participa después como otra tarea. Un retraso 0 no significa ejecución instantánea ni paralela con cada línea del módulo.
+
+Este ejemplo muestra un orden particular; no convierte todo trabajo asíncrono en una única cola con orden universal. Red, eventos y renderizado tienen su contexto. await suspende la continuación de esa función asíncrona, no todo el navegador. Una operación de cálculo larga en el hilo principal puede bloquear interacción aunque esté dentro de una función async. Dividir trabajo o usar un Worker requiere una decisión adicional, no añadir async a cualquier función.
+
+### Abrir y observar
+
+Inicia el servidor del curso como se explica en [ENTORNO.md](../docs/ENTORNO.md) y abre [ejemplo/index.html](ejemplo/index.html) mediante HTTP. GitHub muestra el código fuente; no ejecuta la página. El HTML y CSS están completos y app.js es el módulo de entrada. Usa una copia local para practicar.
+
+**Resultado esperado:** Después del timer, el orden es ["inicio","fin","microtarea","timer"].
+
+### Código explicado por su comportamiento
+
+El código principal de [app.js](ejemplo/app.js) es:
+
+```js
+const orden = [];
+orden.push('inicio');
+setTimeout(() => { orden.push('timer'); mostrar(orden); }, 0);
+Promise.resolve().then(() => { orden.push('microtarea'); });
+orden.push('fin');
+```
+
+La función mostrar del archivo completo escribe JSON en la región de salida usando textContent. Es una ayuda de presentación, no parte del algoritmo. En los laboratorios interactivos, el HTML proporciona controles con los id que consulta el módulo. Identifica primero esas dependencias antes de copiar el código a otra página.
+
+### Experimento
+
+Agrega otra Promise.resolve().then y otro setTimeout. Predice el orden. Después ejecuta un cálculo síncrono breve antes de fin y observa que el timer espera a que termine.
+
+Escribe la predicción antes de ejecutar. Cambia una condición por vez, guarda y recarga. Si el resultado difiere, identifica la entrada y la primera operación que rompe el contrato. No consideres correcto un ejemplo únicamente porque no lanzó excepción.
+
+### Práctica y contraste
+
+Completa [PRACTICA.md](PRACTICA.md) y consulta después [SOLUCIONES.md](SOLUCIONES.md). Ambas páginas permiten volver a esta lección y continuar. Conserva la evidencia de los casos normales, límites y fallos que aplican al tema.
+
 ---
 
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 16 — Web Storage y persistencia en el navegador](../unidad16-storage/README.md)
+- **Unidad anterior:** [Unidad 16: Web Storage y persistencia en el navegador](../unidad16-storage/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 18 — Promises y composición asíncrona](../unidad18-promises/README.md)
+- **Siguiente unidad:** [Unidad 18: Promises y composición asíncrona](../unidad18-promises/README.md)

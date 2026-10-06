@@ -1,4 +1,4 @@
-# Unidad 03 — Decisiones y truthiness
+# Unidad 03: Decisiones y truthiness
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
 
@@ -88,6 +88,7 @@ Pueden reducir anidación cuando expresan precondiciones claras.
 # 8. Práctica guiada
 
 Clasifica:
+
 - undefined;
 - null;
 - 0;
@@ -98,6 +99,7 @@ Clasifica:
 Decide cuáles significan “ausente” según un contrato que tú definas.
 
 # 9. Errores frecuentes
+
 - !valor para cualquier validación;
 - olvidar break;
 - ternarios anidados;
@@ -108,6 +110,7 @@ Decide cuáles significan “ausente” según un contrato que tú definas.
 Validador de cantidad donde 0 es permitido, ausencia no, y negativos son inválidos.
 
 # 11. Autoevaluación
+
 1. ¿0 es falsy?
 2. ¿Falsy significa inválido?
 3. ¿Cuándo switch?
@@ -115,6 +118,7 @@ Validador de cantidad donde 0 es permitido, ausencia no, y negativos son inváli
 5. ¿Qué es guard clause?
 
 # 12. Checklist
+
 - [ ] Distingo ausencia/falsy.
 - [ ] Pruebo límites.
 - [ ] Elijo if/switch.
@@ -123,10 +127,50 @@ Validador de cantidad donde 0 es permitido, ausencia no, y negativos son inváli
 Continúa con ciclos.
 
 
+
+## Laboratorio completo: Decisiones con contrato
+
+### Modelo y contrato
+
+Una decisión debe cubrir límites y datos no admitidos. El contrato de clasificar exige un entero numérico de 0 a 120. Convertir silenciosamente una cadena cambiaría ese contrato. Primero se valida, después se aplica el umbral. Un retorno temprano permite que cada camino sea explícito y evita anidar varias condiciones.
+
+Las condiciones se evalúan según truthiness: un objeto vacío y un array vacío son truthy. No uses if(lista) para decidir si hay elementos; comprueba length. Tampoco confundas asignación con comparación. Los casos de prueba deben incluir justo debajo, en el umbral y justo encima. Una lista de ejemplos típicos puede omitir el único límite incorrecto.
+
+### Abrir y observar
+
+Inicia el servidor del curso como se explica en [ENTORNO.md](../docs/ENTORNO.md) y abre [ejemplo/index.html](ejemplo/index.html) mediante HTTP. GitHub muestra el código fuente; no ejecuta la página. El HTML y CSS están completos y app.js es el módulo de entrada. Usa una copia local para practicar.
+
+**Resultado esperado:** 0 y 17 son menor; 18 y 120 adulta; -1, 121 y la cadena "18" inválida.
+
+### Código explicado por su comportamiento
+
+El código principal de [app.js](ejemplo/app.js) es:
+
+```js
+function clasificar(edad) {
+  if (!Number.isInteger(edad) || edad < 0 || edad > 120) return 'inválida';
+  if (edad < 18) return 'menor';
+  return 'adulta';
+}
+mostrar([0, 17, 18, 120, -1, 121, '18'].map(edad => ({ edad, resultado: clasificar(edad) })));
+```
+
+La función mostrar del archivo completo escribe JSON en la región de salida usando textContent. Es una ayuda de presentación, no parte del algoritmo. En los laboratorios interactivos, el HTML proporciona controles con los id que consulta el módulo. Identifica primero esas dependencias antes de copiar el código a otra página.
+
+### Experimento
+
+Agrega casos 17.5, null y NaN. Cambia el umbral a 21 y actualiza la tabla esperada antes de ejecutar.
+
+Escribe la predicción antes de ejecutar. Cambia una condición por vez, guarda y recarga. Si el resultado difiere, identifica la entrada y la primera operación que rompe el contrato. No consideres correcto un ejemplo únicamente porque no lanzó excepción.
+
+### Práctica y contraste
+
+Completa [PRACTICA.md](PRACTICA.md) y consulta después [SOLUCIONES.md](SOLUCIONES.md). Ambas páginas permiten volver a esta lección y continuar. Conserva la evidencia de los casos normales, límites y fallos que aplican al tema.
+
 ---
 
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 02 — Operadores, coerción y comparación](../unidad02-operadores/README.md)
+- **Unidad anterior:** [Unidad 02: Operadores, coerción y comparación](../unidad02-operadores/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 04 — Ciclos e iteración](../unidad04-ciclos/README.md)
+- **Siguiente unidad:** [Unidad 04: Ciclos e iteración](../unidad04-ciclos/README.md)

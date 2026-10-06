@@ -1,4 +1,4 @@
-# Unidad 06 — Scope, closures y modelo de ejecución
+# Unidad 06: Scope, closures y modelo de ejecución
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
 
@@ -107,6 +107,7 @@ No significa que closures sean “malas”, pero evita retener estructuras enorm
 # 11. Práctica guiada
 
 Crea:
+
 - contador;
 - generador de IDs local;
 - función de configuración que retorna validador.
@@ -114,6 +115,7 @@ Crea:
 Dibuja qué variables conserva cada closure.
 
 # 12. Errores frecuentes
+
 - let disponible fuera del bloque;
 - “hoisting mueve código” como explicación total;
 - usar variable let antes de inicialización;
@@ -124,6 +126,7 @@ Dibuja qué variables conserva cada closure.
 Fábrica de contadores independientes con incremento, lectura y reset sin exponer directamente n.
 
 # 14. Autoevaluación
+
 1. ¿let tiene scope de bloque?
 2. ¿var?
 3. ¿Qué es TDZ?
@@ -132,6 +135,7 @@ Fábrica de contadores independientes con incremento, lectura y reset sin expone
 6. ¿Dos fábricas comparten n?
 
 # 15. Checklist
+
 - [ ] Comprendo scope.
 - [ ] Distingo var/let/const.
 - [ ] Leo stack.
@@ -140,10 +144,51 @@ Fábrica de contadores independientes con incremento, lectura y reset sin expone
 Continúa con arrays.
 
 
+
+## Laboratorio completo: Closures independientes
+
+### Modelo y contrato
+
+La función devuelta conserva acceso al entorno donde fue creada. Cada llamada a crearContador crea una vinculación valor distinta. El contador a no comparte ese estado con b. Una closure no es una copia congelada de cada valor: accede a las vinculaciones de su entorno cuando se ejecuta.
+
+Scope es el alcance donde una vinculación puede consultarse y no equivale a duración de ejecución de una función. let y const tienen alcance de bloque y una zona temporal en la que no pueden leerse antes de inicializarse. No expliques hoisting como si todo el código se moviera físicamente al principio: las declaraciones tienen comportamientos distintos. Cuando una función asíncrona o un callback lee estado, analiza qué entorno conserva y cuándo cambia.
+
+### Abrir y observar
+
+Inicia el servidor del curso como se explica en [ENTORNO.md](../docs/ENTORNO.md) y abre [ejemplo/index.html](ejemplo/index.html) mediante HTTP. GitHub muestra el código fuente; no ejecuta la página. El HTML y CSS están completos y app.js es el módulo de entrada. Usa una copia local para practicar.
+
+**Resultado esperado:** El array resultante es [1,2,11,3,12].
+
+### Código explicado por su comportamiento
+
+El código principal de [app.js](ejemplo/app.js) es:
+
+```js
+function crearContador(inicio = 0) {
+  let valor = inicio;
+  return () => ++valor;
+}
+const a = crearContador();
+const b = crearContador(10);
+mostrar([a(), a(), b(), a(), b()]);
+```
+
+La función mostrar del archivo completo escribe JSON en la región de salida usando textContent. Es una ayuda de presentación, no parte del algoritmo. En los laboratorios interactivos, el HTML proporciona controles con los id que consulta el módulo. Identifica primero esas dependencias antes de copiar el código a otra página.
+
+### Experimento
+
+Crea un tercer contador desde 100 y alterna llamadas. Después implementa reiniciar mediante un objeto con métodos, conservando estado privado en la closure.
+
+Escribe la predicción antes de ejecutar. Cambia una condición por vez, guarda y recarga. Si el resultado difiere, identifica la entrada y la primera operación que rompe el contrato. No consideres correcto un ejemplo únicamente porque no lanzó excepción.
+
+### Práctica y contraste
+
+Completa [PRACTICA.md](PRACTICA.md) y consulta después [SOLUCIONES.md](SOLUCIONES.md). Ambas páginas permiten volver a esta lección y continuar. Conserva la evidencia de los casos normales, límites y fallos que aplican al tema.
+
 ---
 
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 05 — Funciones como valores](../unidad05-funciones/README.md)
+- **Unidad anterior:** [Unidad 05: Funciones como valores](../unidad05-funciones/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 07 — Arrays y transformaciones](../unidad07-arrays/README.md)
+- **Siguiente unidad:** [Unidad 07: Arrays y transformaciones](../unidad07-arrays/README.md)

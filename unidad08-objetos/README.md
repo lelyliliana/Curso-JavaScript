@@ -1,4 +1,4 @@
-# Unidad 08 — Objetos, propiedades y referencias
+# Unidad 08: Objetos, propiedades y referencias
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
 
@@ -73,7 +73,7 @@ comprueba propiedad propia.
 # 7. Igualdad
 
 ```js
-{} === {} // false
+({}) === ({}) // false
 ```
 
 Son objetos distintos.
@@ -108,6 +108,7 @@ No convierte automáticamente todo el grafo anidado en inmutable.
 Actualiza un usuario sin mutar el objeto raíz. Luego añade una dirección anidada y demuestra qué referencia se comparte.
 
 # 11. Errores frecuentes
+
 - {} === {};
 - spread como deep clone;
 - this asumido por lugar de definición;
@@ -118,6 +119,7 @@ Actualiza un usuario sin mutar el objeto raíz. Luego añade una dirección anid
 Transforma colección de usuarios a nuevos objetos con campo derivado sin modificar originales.
 
 # 13. Autoevaluación
+
 1. ¿Cuándo corchetes?
 2. ¿Object.entries?
 3. ¿{} === {}?
@@ -126,6 +128,7 @@ Transforma colección de usuarios a nuevos objetos con campo derivado sin modifi
 6. ¿hasOwn vs in?
 
 # 14. Checklist
+
 - [ ] Modelo objetos.
 - [ ] Comprendo referencias.
 - [ ] Enumero propiedades.
@@ -134,10 +137,49 @@ Transforma colección de usuarios a nuevos objetos con campo derivado sin modifi
 Continúa con destructuring.
 
 
+
+## Laboratorio completo: Objetos y referencias
+
+### Modelo y contrato
+
+Un objeto relaciona propiedades con valores y su identidad no se reduce a sus textos. Copiar mediante spread crea un nuevo objeto exterior, pero no copia recursivamente todo su contenido. El contacto anidado sigue siendo compartido y su cambio aparece en ambos.
+
+Para un cambio inmutable conocido puedes reconstruir los niveles afectados: {...persona, contacto:{...persona.contacto, ciudad:'otra'}}. structuredClone sirve para ciertos datos estructurables, pero no clona cualquier función o recurso y no sustituye decidir qué debe copiarse. optional chaining evita acceder a propiedades de null/undefined en el punto correspondiente; no valida que datos externos tengan el contrato esperado. No uses acceso opcional para esconder una propiedad que tu aplicación exige siempre.
+
+### Abrir y observar
+
+Inicia el servidor del curso como se explica en [ENTORNO.md](../docs/ENTORNO.md) y abre [ejemplo/index.html](ejemplo/index.html) mediante HTTP. GitHub muestra el código fuente; no ejecuta la página. El HTML y CSS están completos y app.js es el módulo de entrada. Usa una copia local para practicar.
+
+**Resultado esperado:** Los nombres son Ana y Luis; ambas ciudades pasan a Montería y mismoContacto es true.
+
+### Código explicado por su comportamiento
+
+El código principal de [app.js](ejemplo/app.js) es:
+
+```js
+const persona = { nombre: 'Ana', contacto: { ciudad: 'Sahagún' } };
+const copia = { ...persona };
+copia.nombre = 'Luis';
+copia.contacto.ciudad = 'Montería';
+mostrar({ persona, copia, mismoContacto: persona.contacto === copia.contacto });
+```
+
+La función mostrar del archivo completo escribe JSON en la región de salida usando textContent. Es una ayuda de presentación, no parte del algoritmo. En los laboratorios interactivos, el HTML proporciona controles con los id que consulta el módulo. Identifica primero esas dependencias antes de copiar el código a otra página.
+
+### Experimento
+
+Reconstruye contacto para que cambiar la ciudad de la copia no modifique persona. Prueba dos objetos con la misma propiedad mediante ===.
+
+Escribe la predicción antes de ejecutar. Cambia una condición por vez, guarda y recarga. Si el resultado difiere, identifica la entrada y la primera operación que rompe el contrato. No consideres correcto un ejemplo únicamente porque no lanzó excepción.
+
+### Práctica y contraste
+
+Completa [PRACTICA.md](PRACTICA.md) y consulta después [SOLUCIONES.md](SOLUCIONES.md). Ambas páginas permiten volver a esta lección y continuar. Conserva la evidencia de los casos normales, límites y fallos que aplican al tema.
+
 ---
 
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 07 — Arrays y transformaciones](../unidad07-arrays/README.md)
+- **Unidad anterior:** [Unidad 07: Arrays y transformaciones](../unidad07-arrays/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 09 — Destructuring, spread y rest](../unidad09-destructuring/README.md)
+- **Siguiente unidad:** [Unidad 09: Destructuring, spread y rest](../unidad09-destructuring/README.md)

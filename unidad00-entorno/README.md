@@ -1,4 +1,4 @@
-# Unidad 00 — Entorno, consola y primer JavaScript
+# Unidad 00: Entorno, consola y primer JavaScript
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
 
@@ -27,6 +27,7 @@ Abre la página y comprueba Console.
 # 3. Si no aparece
 
 Revisa Network:
+
 - ¿app.js devuelve 200?
 - ¿la ruta es correcta?
 - ¿Console muestra un error?
@@ -79,6 +80,7 @@ Algunos comportamientos antiguos permisivos se convierten en errores.
 8. clasifica cada fallo.
 
 # 10. Errores frecuentes
+
 - ruta incorrecta;
 - no mirar Console;
 - usar consola como único código;
@@ -89,6 +91,7 @@ Algunos comportamientos antiguos permisivos se convierten en errores.
 Página mínima con módulo y bitácora de tres fallos distintos diagnosticados con DevTools.
 
 # 12. Autoevaluación
+
 1. ¿Qué hace type=module?
 2. ¿Para qué Network?
 3. ¿Sintaxis vs ejecución?
@@ -96,6 +99,7 @@ Página mínima con módulo y bitácora de tres fallos distintos diagnosticados 
 5. ¿Por qué puede ser necesario HTTP local?
 
 # 13. Checklist
+
 - [ ] Cargo JS.
 - [ ] Uso Console/Network.
 - [ ] Clasifico errores.
@@ -104,9 +108,46 @@ Página mínima con módulo y bitácora de tres fallos distintos diagnosticados 
 Continúa con tipos.
 
 
+
+## Laboratorio completo: Conectar un módulo
+
+### Modelo y contrato
+
+HTML carga app.js mediante script type="module". El navegador obtiene el archivo, analiza su sintaxis y ejecuta el módulo. Una ruta incorrecta impide llegar a esa ejecución; una excepción puede detenerla después de comenzar. El ejemplo escribe tanto en Console como en una región visible para que puedas comparar las dos salidas.
+
+Los módulos se ejecutan en modo estricto y esperan el análisis del documento. Por eso el elemento salida ya existe cuando este ejemplo lo consulta. No todas las operaciones están disponibles en todos los entornos: document pertenece al navegador y no existe automáticamente al ejecutar un archivo con Node.js. Usa HTTP local para los módulos del curso; abrirlos con file puede producir bloqueos de origen que no son errores del algoritmo.
+
+### Abrir y observar
+
+Inicia el servidor del curso como se explica en [ENTORNO.md](../docs/ENTORNO.md) y abre [ejemplo/index.html](ejemplo/index.html) mediante HTTP. GitHub muestra el código fuente; no ejecuta la página. El HTML y CSS están completos y app.js es el módulo de entrada. Usa una copia local para practicar.
+
+**Resultado esperado:** La página muestra El módulo cargó correctamente. La consola muestra Hola, JavaScript.
+
+### Código explicado por su comportamiento
+
+El código principal de [app.js](ejemplo/app.js) es:
+
+```js
+console.log('Hola, JavaScript');
+const salida = document.querySelector('#salida');
+salida.textContent = 'El módulo cargó correctamente.';
+```
+
+La función mostrar del archivo completo escribe JSON en la región de salida usando textContent. Es una ayuda de presentación, no parte del algoritmo. En los laboratorios interactivos, el HTML proporciona controles con los id que consulta el módulo. Identifica primero esas dependencias antes de copiar el código a otra página.
+
+### Experimento
+
+Cambia el saludo, rompe temporalmente la ruta de app.js y restaúrala. Después consulta un id que no exista e intenta escribir textContent; clasifica los dos fallos.
+
+Escribe la predicción antes de ejecutar. Cambia una condición por vez, guarda y recarga. Si el resultado difiere, identifica la entrada y la primera operación que rompe el contrato. No consideres correcto un ejemplo únicamente porque no lanzó excepción.
+
+### Práctica y contraste
+
+Completa [PRACTICA.md](PRACTICA.md) y consulta después [SOLUCIONES.md](SOLUCIONES.md). Ambas páginas permiten volver a esta lección y continuar. Conserva la evidencia de los casos normales, límites y fallos que aplican al tema.
+
 ---
 
 ## Continuar el curso
 
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 01 — Valores, tipos y variables](../unidad01-tipos/README.md)
+- **Siguiente unidad:** [Unidad 01: Valores, tipos y variables](../unidad01-tipos/README.md)

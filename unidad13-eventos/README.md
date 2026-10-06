@@ -1,4 +1,4 @@
-# Unidad 13 — Eventos y delegación
+# Unidad 13: Eventos y delegación
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
 
@@ -95,6 +95,7 @@ Lista dinámica con acciones editar/eliminar usando un solo listener delegado.
 Imprime target/currentTarget y observa bubbling.
 
 # 11. Errores frecuentes
+
 - ejecutar handler al registrar;
 - target=currentTarget siempre;
 - stopPropagation para todo;
@@ -106,6 +107,7 @@ Imprime target/currentTarget y observa bubbling.
 Lista con delegación que soporte elementos añadidos después y botones semánticos.
 
 # 13. Autoevaluación
+
 1. ¿Qué pasas a addEventListener?
 2. ¿target/currentTarget?
 3. ¿Qué es bubbling?
@@ -114,6 +116,7 @@ Lista con delegación que soporte elementos añadidos después y botones semánt
 6. ¿Cómo retirar listener?
 
 # 14. Checklist
+
 - [ ] Registro handlers.
 - [ ] Comprendo propagación.
 - [ ] Delego cuando aporta.
@@ -122,10 +125,50 @@ Lista con delegación que soporte elementos añadidos después y botones semánt
 Continúa con formularios.
 
 
+
+## Laboratorio completo: Eventos y delegación
+
+### Modelo y contrato
+
+Un listener recibe un objeto evento. target identifica el origen y currentTarget el objeto cuyo listener está ejecutándose. La propagación permite que un contenedor reciba eventos originados en descendientes. Delegación aprovecha esa relación para controles que pueden añadirse después.
+
+closest busca el botón correspondiente incluso si se activa un span dentro de él. La comprobación de pertenencia delimita el componente. Usa button para acciones: proporciona teclado y semántica sin recrearlos en un div. preventDefault cancela una acción predeterminada cancelable (como envío tradicional), no detiene propagación. stopPropagation modifica propagación y no debe usarse por costumbre para esconder una relación mal entendida. Un listener duplicado en cada render puede ejecutar una acción varias veces.
+
+### Abrir y observar
+
+Inicia el servidor del curso como se explica en [ENTORNO.md](../docs/ENTORNO.md) y abre [ejemplo/index.html](ejemplo/index.html) mediante HTTP. GitHub muestra el código fuente; no ejecuta la página. El HTML y CSS están completos y app.js es el módulo de entrada. Usa una copia local para practicar.
+
+**Resultado esperado:** Activar Elegir lectura muestra elegido lectura; Elegir robótica muestra robotica. Funciona con Enter en los botones.
+
+### Código explicado por su comportamiento
+
+El código principal de [app.js](ejemplo/app.js) es:
+
+```js
+const lista = document.querySelector('#lista');
+lista.addEventListener('click', (event) => {
+  const boton = event.target.closest('button[data-id]');
+  if (!boton || !lista.contains(boton)) return;
+  mostrar({ elegido: boton.dataset.id });
+});
+```
+
+La función mostrar del archivo completo escribe JSON en la región de salida usando textContent. Es una ayuda de presentación, no parte del algoritmo. En los laboratorios interactivos, el HTML proporciona controles con los id que consulta el módulo. Identifica primero esas dependencias antes de copiar el código a otra página.
+
+### Experimento
+
+Añade un tercer botón después de registrar el listener y comprueba delegación. Haz que el texto del botón esté dentro de span y compara target con el botón encontrado.
+
+Escribe la predicción antes de ejecutar. Cambia una condición por vez, guarda y recarga. Si el resultado difiere, identifica la entrada y la primera operación que rompe el contrato. No consideres correcto un ejemplo únicamente porque no lanzó excepción.
+
+### Práctica y contraste
+
+Completa [PRACTICA.md](PRACTICA.md) y consulta después [SOLUCIONES.md](SOLUCIONES.md). Ambas páginas permiten volver a esta lección y continuar. Conserva la evidencia de los casos normales, límites y fallos que aplican al tema.
+
 ---
 
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 12 — DOM y renderizado seguro](../unidad12-dom/README.md)
+- **Unidad anterior:** [Unidad 12: DOM y renderizado seguro](../unidad12-dom/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 14 — Formularios y validación](../unidad14-formularios/README.md)
+- **Siguiente unidad:** [Unidad 14: Formularios y validación](../unidad14-formularios/README.md)

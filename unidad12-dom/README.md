@@ -1,4 +1,4 @@
-# Unidad 12 — DOM y renderizado seguro
+# Unidad 12: DOM y renderizado seguro
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
 
@@ -97,6 +97,7 @@ Los navegadores modernos optimizan muchas operaciones; úsalo por claridad/agrup
 # 10. Práctica guiada
 
 Desde un array de productos:
+
 1. selecciona lista;
 2. limpia estado anterior de forma controlada;
 3. crea li;
@@ -104,6 +105,7 @@ Desde un array de productos:
 5. añade data-id.
 
 # 11. Errores frecuentes
+
 - asumir querySelector no null;
 - innerHTML con entrada;
 - DOM como estado de negocio;
@@ -114,6 +116,7 @@ Desde un array de productos:
 Renderiza una lista con datos que contengan caracteres HTML y demuestra que se muestran como texto.
 
 # 13. Autoevaluación
+
 1. ¿querySelector si no encuentra?
 2. ¿textContent interpreta HTML?
 3. ¿Por qué innerHTML es sensible?
@@ -121,6 +124,7 @@ Renderiza una lista con datos que contengan caracteres HTML y demuestra que se m
 5. ¿DOM debe ser siempre el estado principal?
 
 # 14. Checklist
+
 - [ ] Consulto nodos.
 - [ ] Renderizo texto seguro.
 - [ ] Creo elementos.
@@ -129,10 +133,51 @@ Renderiza una lista con datos que contengan caracteres HTML y demuestra que se m
 Continúa con eventos.
 
 
+
+## Laboratorio completo: Construir DOM seguro
+
+### Modelo y contrato
+
+DOM permite consultar y modificar nodos. querySelector devuelve la primera coincidencia o null. createElement crea un nodo y textContent asigna texto sin interpretarlo como HTML. La cadena de entrada no debe convertirse en marcado simplemente porque contiene símbolos < y >.
+
+append agrega nodos; replaceChildren puede reemplazar una colección y resulta útil al renderizar desde estado. Sin embargo, reconstruir todo un formulario puede perder foco y selección: decide qué necesita actualizarse. Un selector correcto depende de una estructura que exista cuando se consulta. El render debe reflejar datos validados, pero incluso un título válido como texto puede contener símbolos que no deben ejecutarse. Validación y elección de API de presentación cumplen responsabilidades distintas.
+
+### Abrir y observar
+
+Inicia el servidor del curso como se explica en [ENTORNO.md](../docs/ENTORNO.md) y abre [ejemplo/index.html](ejemplo/index.html) mediante HTTP. GitHub muestra el código fuente; no ejecuta la página. El HTML y CSS están completos y app.js es el módulo de entrada. Usa una copia local para practicar.
+
+**Resultado esperado:** Dos elementos de lista. El segundo muestra literalmente la cadena con <img>; no crea una imagen.
+
+### Código explicado por su comportamiento
+
+El código principal de [app.js](ejemplo/app.js) es:
+
+```js
+const lista = document.querySelector('#lista');
+for (const nombre of ['Ana', '<img src=x onerror=alert(1)>']) {
+  const item = document.createElement('li');
+  item.textContent = nombre;
+  lista.append(item);
+}
+mostrar({ elementos: lista.children.length });
+```
+
+La función mostrar del archivo completo escribe JSON en la región de salida usando textContent. Es una ayuda de presentación, no parte del algoritmo. En los laboratorios interactivos, el HTML proporciona controles con los id que consulta el módulo. Identifica primero esas dependencias antes de copiar el código a otra página.
+
+### Experimento
+
+Agrega un tercer nombre desde una cadena variable. Limpia la lista con replaceChildren y vuelve a construirla. Comprueba que no aparezca ningún img creado por el segundo texto.
+
+Escribe la predicción antes de ejecutar. Cambia una condición por vez, guarda y recarga. Si el resultado difiere, identifica la entrada y la primera operación que rompe el contrato. No consideres correcto un ejemplo únicamente porque no lanzó excepción.
+
+### Práctica y contraste
+
+Completa [PRACTICA.md](PRACTICA.md) y consulta después [SOLUCIONES.md](SOLUCIONES.md). Ambas páginas permiten volver a esta lección y continuar. Conserva la evidencia de los casos normales, límites y fallos que aplican al tema.
+
 ---
 
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 11 — Prototipos, clases y this](../unidad11-clases-prototipos/README.md)
+- **Unidad anterior:** [Unidad 11: Prototipos, clases y this](../unidad11-clases-prototipos/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 13 — Eventos y delegación](../unidad13-eventos/README.md)
+- **Siguiente unidad:** [Unidad 13: Eventos y delegación](../unidad13-eventos/README.md)

@@ -1,28 +1,9 @@
-# Versión 1.0
+# Versión 1.1
 
-Estado: **completa, autodidacta y disponible**.
+34 unidades desde el lenguaje hasta aplicaciones sin framework. Las unidades 00 a 31 tienen ejemplos completos; todas las unidades incluyen práctica y solución razonada. El taller y proyecto concretan requisitos y aceptación.
 
-## Alcance
-- 34 unidades en siete niveles;
-- lenguaje JavaScript moderno;
-- arrays, objetos, Map/Set, clases/prototipos;
-- DOM, eventos, formularios y accesibilidad dinámica;
-- Web Storage;
-- event loop, Promises y async/await;
-- Fetch, errores, AbortController y estados UI;
-- módulos ES y npm;
-- calidad, pruebas y DevTools;
-- estado/renderizado y arquitectura;
-- rendimiento y seguridad frontend básica;
-- aplicación modular de referencia;
-- taller;
-- proyecto final con plantilla, rúbrica y checklist.
+El servidor Node 24 utiliza APIs incorporadas y proporciona respuestas controladas para HTTP, JSON, esquema, carga vacía y demora. La app de tareas implementa operaciones locales, filtros, edición y persistencia versionada. No utiliza cuentas, backend de tareas ni sincronización.
 
-## Criterio de cierre
-El curso cubre JavaScript sin framework desde fundamentos hasta una aplicación web modular y asíncrona.
+Las guías distinguen navegador y Node e incluyen Ubuntu, Windows y macOS. Las pruebas opcionales de navegador están separadas de las dependencias del sitio. React continúa como curso independiente.
 
-React permanece como curso independiente.
-
-## Experiencia de aprendizaje
-
-El curso puede recorrerse de forma autónoma desde tipos, funciones y colecciones hasta DOM, asincronía, consumo de APIs, módulos, pruebas, rendimiento y seguridad básica del frontend. Las unidades priorizan comprensión del modelo de ejecución, práctica, accesibilidad dinámica, diagnóstico con DevTools y decisiones justificadas.
+[Índice](README.md) · [Verificación](docs/VERIFICACION.md)

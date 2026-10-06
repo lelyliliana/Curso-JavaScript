@@ -1,4 +1,4 @@
-# Unidad 01 — Valores, tipos y variables
+# Unidad 01: Valores, tipos y variables
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
 
@@ -8,6 +8,7 @@ Distinguir primitivos y referencias, const y let, null y undefined, mutación y 
 # 1. Primitivos
 
 JavaScript tiene:
+
 - string;
 - number;
 - bigint;
@@ -102,6 +103,7 @@ No mezcles BigInt y Number aritméticamente sin una decisión/conversión explí
 # 10. Práctica guiada
 
 Predice tipo/comprobación apropiada de:
+
 - null;
 - [];
 - {};
@@ -112,6 +114,7 @@ Predice tipo/comprobación apropiada de:
 Después verifica.
 
 # 11. Errores frecuentes
+
 - const = inmutable;
 - null y undefined como idénticos;
 - typeof array = array;
@@ -122,6 +125,7 @@ Después verifica.
 Tabla de valores con typeof, comprobación adecuada y explicación.
 
 # 13. Autoevaluación
+
 1. ¿const impide mutar objeto?
 2. ¿typeof null?
 3. ¿Cómo detectar Array?
@@ -130,6 +134,7 @@ Tabla de valores con typeof, comprobación adecuada y explicación.
 6. ¿Number tiene int separado?
 
 # 14. Checklist
+
 - [ ] Distingo primitivos/referencias.
 - [ ] Uso const/let.
 - [ ] Comprendo ausencia.
@@ -138,10 +143,50 @@ Tabla de valores con typeof, comprobación adecuada y explicación.
 Continúa con operadores.
 
 
+
+## Laboratorio completo: Valores y variables
+
+### Modelo y contrato
+
+Una variable es una vinculación con un valor. const impide reasignar esa vinculación; no congela automáticamente un objeto. datos conserva la misma referencia y permite modificar activo. let admite reasignación cuando el proceso necesita un valor cambiante. No utilices let por costumbre para todos los datos.
+
+typeof ofrece categorías del lenguaje, pero typeof null devuelve object por una particularidad histórica. Para comprobar null utiliza igualdad estricta con null. Los números ordinarios usan representación de coma flotante: no asumas precisión exacta para cualquier entero o decimal. NaN tiene tipo number aunque represente un resultado numérico inválido. Las reglas del dominio deben comprobar también finitud, rango y, cuando importe, enteros seguros.
+
+### Abrir y observar
+
+Inicia el servidor del curso como se explica en [ENTORNO.md](../docs/ENTORNO.md) y abre [ejemplo/index.html](ejemplo/index.html) mediante HTTP. GitHub muestra el código fuente; no ejecuta la página. El HTML y CSS están completos y app.js es el módulo de entrada. Usa una copia local para practicar.
+
+**Resultado esperado:** nombre Ana, intentos 2, tipo number, activo false y tipoNull object.
+
+### Código explicado por su comportamiento
+
+El código principal de [app.js](ejemplo/app.js) es:
+
+```js
+const nombre = 'Ana';
+let intentos = 1;
+intentos += 1;
+const datos = { nombre, activo: true };
+datos.activo = false;
+mostrar({ nombre, intentos, tipo: typeof intentos, activo: datos.activo, tipoNull: typeof null });
+```
+
+La función mostrar del archivo completo escribe JSON en la región de salida usando textContent. Es una ayuda de presentación, no parte del algoritmo. En los laboratorios interactivos, el HTML proporciona controles con los id que consulta el módulo. Identifica primero esas dependencias antes de copiar el código a otra página.
+
+### Experimento
+
+Intenta reasignar nombre dentro de un experimento separado y observa el error. Cambia datos.nombre sin reasignar datos. Compara typeof NaN, Number.isNaN(NaN) y Number.isFinite(Infinity).
+
+Escribe la predicción antes de ejecutar. Cambia una condición por vez, guarda y recarga. Si el resultado difiere, identifica la entrada y la primera operación que rompe el contrato. No consideres correcto un ejemplo únicamente porque no lanzó excepción.
+
+### Práctica y contraste
+
+Completa [PRACTICA.md](PRACTICA.md) y consulta después [SOLUCIONES.md](SOLUCIONES.md). Ambas páginas permiten volver a esta lección y continuar. Conserva la evidencia de los casos normales, límites y fallos que aplican al tema.
+
 ---
 
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 00 — Entorno, consola y primer JavaScript](../unidad00-entorno/README.md)
+- **Unidad anterior:** [Unidad 00: Entorno, consola y primer JavaScript](../unidad00-entorno/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 02 — Operadores, coerción y comparación](../unidad02-operadores/README.md)
+- **Siguiente unidad:** [Unidad 02: Operadores, coerción y comparación](../unidad02-operadores/README.md)

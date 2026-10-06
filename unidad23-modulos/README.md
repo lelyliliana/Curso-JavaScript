@@ -1,4 +1,4 @@
-# Unidad 23 — Módulos ES
+# Unidad 23: Módulos ES
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
 
@@ -102,6 +102,7 @@ No lo uses si una importación estática expresa mejor la dependencia.
 Divide una lista de productos monolítica en módulos. Dibuja el grafo de imports y asegúrate de que no hay ciclos.
 
 # 12. Errores frecuentes
+
 - olvidar ./;
 - asumir variables globales;
 - efectos inesperados al importar;
@@ -113,6 +114,7 @@ Divide una lista de productos monolítica en módulos. Dibuja el grafo de import
 App en cuatro módulos con grafo de dependencias explicado.
 
 # 14. Autoevaluación
+
 1. ¿Módulo tiene scope propio?
 2. ¿Import es copia simple?
 3. ¿Default es obligatorio?
@@ -121,6 +123,7 @@ App en cuatro módulos con grafo de dependencias explicado.
 6. ¿Un archivo por función?
 
 # 15. Checklist
+
 - [ ] Imports explícitos.
 - [ ] Responsabilidades.
 - [ ] Sin globales accidentales.
@@ -129,10 +132,46 @@ App en cuatro módulos con grafo de dependencias explicado.
 Continúa con npm.
 
 
+
+## Laboratorio completo: Módulos con contrato
+
+### Modelo y contrato
+
+Un módulo define exportaciones e importa las que necesita. La ruta relativa de un import se resuelve desde el archivo que importa, no desde el HTML que lo cargó. Los módulos del navegador requieren rutas o resoluciones compatibles con ese entorno; un nombre de paquete no funciona automáticamente solo porque existe en npm.
+
+Las vinculaciones de módulos y sus dependencias se analizan antes de ejecutar. Un nombre no exportado es un problema de contrato entre módulos, distinto de un archivo ausente. Evita dependencias circulares innecesarias y módulos que consulten DOM al importarse si también necesitas probar su lógica en Node. Separar cálculo de presentación permite reutilizar y comprobar la operación sin una página. El archivo calculos.js no debe imprimir ni modificar la región de salida.
+
+### Abrir y observar
+
+Inicia el servidor del curso como se explica en [ENTORNO.md](../docs/ENTORNO.md) y abre [ejemplo/index.html](ejemplo/index.html) mediante HTTP. GitHub muestra el código fuente; no ejecuta la página. El HTML y CSS están completos y app.js es el módulo de entrada. Usa una copia local para practicar.
+
+**Resultado esperado:** resultado 5 y carga correcta de app.js y calculos.js bajo HTTP.
+
+### Código explicado por su comportamiento
+
+El código principal de [app.js](ejemplo/app.js) es:
+
+```js
+import { sumar } from './calculos.js';
+mostrar({ resultado: sumar(2, 3) });
+```
+
+La función mostrar del archivo completo escribe JSON en la región de salida usando textContent. Es una ayuda de presentación, no parte del algoritmo. En los laboratorios interactivos, el HTML proporciona controles con los id que consulta el módulo. Identifica primero esas dependencias antes de copiar el código a otra página.
+
+### Experimento
+
+Renombra la exportación en calculos.js sin cambiar el import y clasifica el fallo. Restaura y añade multiplicar con un contrato numérico explícito.
+
+Escribe la predicción antes de ejecutar. Cambia una condición por vez, guarda y recarga. Si el resultado difiere, identifica la entrada y la primera operación que rompe el contrato. No consideres correcto un ejemplo únicamente porque no lanzó excepción.
+
+### Práctica y contraste
+
+Completa [PRACTICA.md](PRACTICA.md) y consulta después [SOLUCIONES.md](SOLUCIONES.md). Ambas páginas permiten volver a esta lección y continuar. Conserva la evidencia de los casos normales, límites y fallos que aplican al tema.
+
 ---
 
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 22 — Estados de interfaz para datos asíncronos](../unidad22-estados-ui/README.md)
+- **Unidad anterior:** [Unidad 22: Estados de interfaz para datos asíncronos](../unidad22-estados-ui/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 24 — npm, package.json y dependencias](../unidad24-npm/README.md)
+- **Siguiente unidad:** [Unidad 24: npm, package.json y dependencias](../unidad24-npm/README.md)

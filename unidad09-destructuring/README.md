@@ -1,4 +1,4 @@
-# Unidad 09 — Destructuring, spread y rest
+# Unidad 09: Destructuring, spread y rest
 
 [Volver al índice del curso](../README.md) · [Ver el curso en Aprende con Leli](https://lelyliliana.github.io/aprende-con-leli/cursos/javascript/)
 
@@ -121,6 +121,7 @@ usuario.direccion.ciudad
 sin mutar los objetos originales. Comprueba referencias con `===`.
 
 # 12. Errores frecuentes
+
 - default esperando cubrir null;
 - rest y spread como lo mismo;
 - spread = deep clone;
@@ -131,6 +132,7 @@ sin mutar los objetos originales. Comprueba referencias con `===`.
 Implementa actualización inmutable superficial de un estado anidado y demuestra qué referencias cambiaron.
 
 # 14. Autoevaluación
+
 1. ¿Default se usa con null?
 2. ¿Rest recoge o expande?
 3. ¿Spread de objeto es profundo?
@@ -138,6 +140,7 @@ Implementa actualización inmutable superficial de un estado anidado y demuestra
 5. ¿Para qué structuredClone?
 
 # 15. Checklist
+
 - [ ] Desestructuro.
 - [ ] Distingo rest/spread.
 - [ ] Actualizo niveles necesarios.
@@ -146,10 +149,49 @@ Implementa actualización inmutable superficial de un estado anidado y demuestra
 Continúa con Map y Set.
 
 
+
+## Laboratorio completo: Destructuring y rest
+
+### Modelo y contrato
+
+Destructuring extrae valores según una estructura. El valor por defecto se aplica a undefined, no a cualquier valor falsy: cupos 0 permanece 0. Rest agrupa propiedades o argumentos restantes y spread expande una colección o copia propiedades en otro contexto. La misma notación de tres puntos cumple responsabilidades distintas según su posición.
+
+Excluir una propiedad con rest puede construir una vista de datos, pero no es una política de seguridad completa. Si datos externos contienen otras propiedades sensibles o inesperadas, una lista permitida explícita puede ser más adecuada. El resultado de rest también es una copia superficial. Con parámetros de función, decide si un objeto ausente o null es admitido antes de destructurarlo: un defecto = {} no cubre null automáticamente.
+
+### Abrir y observar
+
+Inicia el servidor del curso como se explica en [ENTORNO.md](../docs/ENTORNO.md) y abre [ejemplo/index.html](ejemplo/index.html) mediante HTTP. GitHub muestra el código fuente; no ejecuta la página. El HTML y CSS están completos y app.js es el módulo de entrada. Usa una copia local para practicar.
+
+**Resultado esperado:** cupos conserva 0, faltante usa sin dato, resumen incluye titulo/cupos y suma vale 6.
+
+### Código explicado por su comportamiento
+
+El código principal de [app.js](ejemplo/app.js) es:
+
+```js
+const curso = { titulo: 'JavaScript', cupos: 0, meta: { nivel: 'inicial' } };
+const { titulo, cupos = 20, faltante = 'sin dato' } = curso;
+const { meta, ...resumen } = curso;
+function sumar(...valores) { return valores.reduce((total, valor) => total + valor, 0); }
+mostrar({ titulo, cupos, faltante, resumen, suma: sumar(1, 2, 3) });
+```
+
+La función mostrar del archivo completo escribe JSON en la región de salida usando textContent. Es una ayuda de presentación, no parte del algoritmo. En los laboratorios interactivos, el HTML proporciona controles con los id que consulta el módulo. Identifica primero esas dependencias antes de copiar el código a otra página.
+
+### Experimento
+
+Prueba cupos undefined y null. Escribe resumirCurso que devuelva únicamente titulo y cupos de tipos válidos, sin copiar propiedades desconocidas.
+
+Escribe la predicción antes de ejecutar. Cambia una condición por vez, guarda y recarga. Si el resultado difiere, identifica la entrada y la primera operación que rompe el contrato. No consideres correcto un ejemplo únicamente porque no lanzó excepción.
+
+### Práctica y contraste
+
+Completa [PRACTICA.md](PRACTICA.md) y consulta después [SOLUCIONES.md](SOLUCIONES.md). Ambas páginas permiten volver a esta lección y continuar. Conserva la evidencia de los casos normales, límites y fallos que aplican al tema.
+
 ---
 
 ## Continuar el curso
 
-- **Unidad anterior:** [Unidad 08 — Objetos, propiedades y referencias](../unidad08-objetos/README.md)
+- **Unidad anterior:** [Unidad 08: Objetos, propiedades y referencias](../unidad08-objetos/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
-- **Siguiente unidad:** [Unidad 10 — Map, Set y elección de estructuras](../unidad10-map-set/README.md)
+- **Siguiente unidad:** [Unidad 10: Map, Set y elección de estructuras](../unidad10-map-set/README.md)
