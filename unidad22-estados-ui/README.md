@@ -204,3 +204,11 @@ Completa [PRACTICA.md](PRACTICA.md) y consulta después [SOLUCIONES.md](SOLUCION
 - **Unidad anterior:** [Unidad 21: Errores de red, cancelación y timeouts](../unidad21-errores-red/README.md)
 - **Volver al índice:** [Todas las unidades](../README.md)
 - **Siguiente unidad:** [Unidad 23: Módulos ES](../unidad23-modulos/README.md)
+
+---
+
+### ¿Necesitas apoyo con este tema?
+
+Si te bloqueaste con la práctica, necesitas revisar tu entorno o adaptar lo aprendido a tu proyecto, podemos trabajarlo en una sesión personalizada.
+
+[**Solicitar asesoría para este tema por WhatsApp**](https://wa.me/573103618296?text=Hola%2C%20Leli.%20Estoy%20estudiando%20Unidad%2022%20%E2%80%94%20Estados%20de%20interfaz%3A%20loading%2Ferror%2Fempty%20del%20curso%20JavaScript%20desde%20cero%20%28https%3A%2F%2Fgithub.com%2Flelyliliana%2FCurso-JavaScript%2Ftree%2Fmain%2Funidad22-estados-ui%29%20y%20necesito%20una%20asesor%C3%ADa%20personalizada.%20Mi%20duda%20es%E2%80%A6)
